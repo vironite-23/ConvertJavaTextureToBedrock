@@ -1,6 +1,6 @@
 {
-  "name": "ConvertJavaTextureToBedrock",
-  "short_name": "ConvertJavaTextureToBedrock",
+  "name": "ConvertJavaTextureToBedrockWebApp",
+  "short_name": "ConvertJavaTextureToBedrockWebApp",
   "description": "Web app for convert Minecraft Java texture packs to Bedrock texture packs",
   "dir": null,
   "lang": null,
