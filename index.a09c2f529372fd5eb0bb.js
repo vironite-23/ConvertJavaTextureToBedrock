@@ -658,6 +658,33 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/img/header.jpg":
+/*!****************************!*\
+  !*** ./src/img/header.jpg ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "header.jpg");
+
+/***/ }),
+
+/***/ "./src/js/images.js":
+/*!**************************!*\
+  !*** ./src/js/images.js ***!
+  \**************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _img_header_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../img/header.jpg */ "./src/img/header.jpg");
+
+
+/***/ }),
+
 /***/ "./src/js/index.mjs":
 /*!**************************!*\
   !*** ./src/js/index.mjs ***!
@@ -672,6 +699,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
 /* harmony import */ var _worker_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./worker.js */ "./src/js/worker.js");
 /* harmony import */ var _css_style_less__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../css/style.less */ "./src/css/style.less");
+/* harmony import */ var _images_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./images.js */ "./src/js/images.js");
+
 
 
 

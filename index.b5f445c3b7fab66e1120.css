@@ -7546,8 +7546,8 @@ footer {
 footer .switch label {
   color: #ffeb3b !important;
 }
-footer .switch label input[type=checkbox]:checked + .lever,
-footer .switch label input[type=checkbox]:checked + .lever:after {
+footer .switch label input[type="checkbox"]:checked + .lever,
+footer .switch label input[type="checkbox"]:checked + .lever:after {
   background-color: #ffeb3b !important;
 }
 footer .switch label :active:before {
@@ -7599,5 +7599,40 @@ footer .switch label :active:before {
   .btn.disabled {
     background-color: #424242 !important;
   }
+}
+.mobileOnly {
+  display: none;
+}
+.dekstopOnly {
+  display: block;
+}
+@media (max-width: 768px) {
+  .mobileOnly {
+    display: block;
+  }
+  .dekstopOnly {
+    display: none;
+  }
+}
+main {
+  background: #c78a73 !important;
+  margin: 25px;
+}
+body {
+  background-color: #795548 !important;
+}
+nav .nav-title {
+  margin: 0px 28px;
+}
+nav.nav-extended {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(header.jpg);
+  background-position: center;
+}
+footer .switch label {
+  color: #4caf50 !important;
+}
+footer .switch label input[type="checkbox"]:checked + .lever,
+footer .switch label input[type="checkbox"]:checked + .lever:after {
+  background: #4caf50 !important;
 }
 
