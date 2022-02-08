@@ -880,6 +880,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Conversion was successful",
             content: logs,
             icon: "success",
+            //buttons: ["zip", "mcpack"]
             buttons: "Save"
         });
 
@@ -942,7 +943,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function() {
-  return new Worker(__webpack_require__.p + "worker.4cb4aed9c2a5d1a482da.js");
+  return new Worker(__webpack_require__.p + "worker.9c23cb7aaa80a8d4986f.js");
 };
 
 /***/ })
