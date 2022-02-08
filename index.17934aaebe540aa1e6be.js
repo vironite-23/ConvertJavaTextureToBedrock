@@ -877,7 +877,7 @@ document.addEventListener("DOMContentLoaded", () => {
         selectInputFileButton.value = selectInputFolderButton.value = "";
 
         const savePopup = sweetalert__WEBPACK_IMPORTED_MODULE_2__({
-            title: "Conversion was successfully",
+            title: "Conversion was successful",
             content: logs,
             icon: "success",
             buttons: "Save"
@@ -903,7 +903,7 @@ document.addEventListener("DOMContentLoaded", () => {
         selectInputFileButton.value = selectInputFolderButton.value = "";
 
         sweetalert__WEBPACK_IMPORTED_MODULE_2__({
-            title: "Conversion was failed",
+            title: "Conversion failed",
             content: logs,
             icon: "error"
         });
@@ -942,7 +942,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function() {
-  return new Worker(__webpack_require__.p + "worker.0a84ac5c83c30488d4df.js");
+  return new Worker(__webpack_require__.p + "worker.4cb4aed9c2a5d1a482da.js");
 };
 
 /***/ })
