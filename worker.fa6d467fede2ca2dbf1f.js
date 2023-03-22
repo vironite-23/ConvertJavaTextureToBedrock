@@ -95,14 +95,9 @@
 
 function _arrayLikeToArray(arr, len) {
   if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
   return arr2;
 }
-
 module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -117,7 +112,6 @@ module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exp
 function _arrayWithHoles(arr) {
   if (Array.isArray(arr)) return arr;
 }
-
 module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -130,11 +124,9 @@ module.exports = _arrayWithHoles, module.exports.__esModule = true, module.expor
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-
 function _arrayWithoutHoles(arr) {
   if (Array.isArray(arr)) return arrayLikeToArray(arr);
 }
-
 module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -150,10 +142,8 @@ function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
-
   return self;
 }
-
 module.exports = _assertThisInitialized, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -170,7 +160,6 @@ function _classCallCheck(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 }
-
 module.exports = _classCallCheck, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -183,9 +172,7 @@ module.exports = _classCallCheck, module.exports.__esModule = true, module.expor
 /***/ (function(module, exports, __webpack_require__) {
 
 var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
 var isNativeReflectConstruct = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
-
 function _construct(Parent, args, Class) {
   if (isNativeReflectConstruct()) {
     module.exports = _construct = Reflect.construct.bind(), module.exports.__esModule = true, module.exports["default"] = module.exports;
@@ -199,10 +186,8 @@ function _construct(Parent, args, Class) {
       return instance;
     }, module.exports.__esModule = true, module.exports["default"] = module.exports;
   }
-
   return _construct.apply(null, arguments);
 }
-
 module.exports = _construct, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -212,18 +197,18 @@ module.exports = _construct, module.exports.__esModule = true, module.exports["d
   !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
   \************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+var toPropertyKey = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/@babel/runtime/helpers/toPropertyKey.js");
 function _defineProperties(target, props) {
   for (var i = 0; i < props.length; i++) {
     var descriptor = props[i];
     descriptor.enumerable = descriptor.enumerable || false;
     descriptor.configurable = true;
     if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
+    Object.defineProperty(target, toPropertyKey(descriptor.key), descriptor);
   }
 }
-
 function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
@@ -232,7 +217,6 @@ function _createClass(Constructor, protoProps, staticProps) {
   });
   return Constructor;
 }
-
 module.exports = _createClass, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -242,9 +226,11 @@ module.exports = _createClass, module.exports.__esModule = true, module.exports[
   !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
   \***************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+var toPropertyKey = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/@babel/runtime/helpers/toPropertyKey.js");
 function _defineProperty(obj, key, value) {
+  key = toPropertyKey(key);
   if (key in obj) {
     Object.defineProperty(obj, key, {
       value: value,
@@ -255,10 +241,8 @@ function _defineProperty(obj, key, value) {
   } else {
     obj[key] = value;
   }
-
   return obj;
 }
-
 module.exports = _defineProperty, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -274,19 +258,16 @@ function _extends() {
   module.exports = _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
-
       for (var key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
           target[key] = source[key];
         }
       }
     }
-
     return target;
   }, module.exports.__esModule = true, module.exports["default"] = module.exports;
   return _extends.apply(this, arguments);
 }
-
 module.exports = _extends, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -304,7 +285,6 @@ function _getPrototypeOf(o) {
   }, module.exports.__esModule = true, module.exports["default"] = module.exports;
   return _getPrototypeOf(o);
 }
-
 module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -317,12 +297,10 @@ module.exports = _getPrototypeOf, module.exports.__esModule = true, module.expor
 /***/ (function(module, exports, __webpack_require__) {
 
 var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
     throw new TypeError("Super expression must either be null or a function");
   }
-
   subClass.prototype = Object.create(superClass && superClass.prototype, {
     constructor: {
       value: subClass,
@@ -335,7 +313,6 @@ function _inherits(subClass, superClass) {
   });
   if (superClass) setPrototypeOf(subClass, superClass);
 }
-
 module.exports = _inherits, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -352,7 +329,6 @@ function _interopRequireDefault(obj) {
     "default": obj
   };
 }
-
 module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -365,7 +341,6 @@ module.exports = _interopRequireDefault, module.exports.__esModule = true, modul
 /***/ (function(module, exports, __webpack_require__) {
 
 var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
-
 function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
   var cacheBabelInterop = new WeakMap();
@@ -374,31 +349,24 @@ function _getRequireWildcardCache(nodeInterop) {
     return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
   })(nodeInterop);
 }
-
 function _interopRequireWildcard(obj, nodeInterop) {
   if (!nodeInterop && obj && obj.__esModule) {
     return obj;
   }
-
   if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
     return {
       "default": obj
     };
   }
-
   var cache = _getRequireWildcardCache(nodeInterop);
-
   if (cache && cache.has(obj)) {
     return cache.get(obj);
   }
-
   var newObj = {};
   var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
   for (var key in obj) {
     if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
       var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
       if (desc && (desc.get || desc.set)) {
         Object.defineProperty(newObj, key, desc);
       } else {
@@ -406,16 +374,12 @@ function _interopRequireWildcard(obj, nodeInterop) {
       }
     }
   }
-
   newObj["default"] = obj;
-
   if (cache) {
     cache.set(obj, newObj);
   }
-
   return newObj;
 }
-
 module.exports = _interopRequireWildcard, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -431,7 +395,6 @@ function _isNativeReflectConstruct() {
   if (typeof Reflect === "undefined" || !Reflect.construct) return false;
   if (Reflect.construct.sham) return false;
   if (typeof Proxy === "function") return true;
-
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
@@ -439,7 +402,6 @@ function _isNativeReflectConstruct() {
     return false;
   }
 }
-
 module.exports = _isNativeReflectConstruct, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -454,7 +416,6 @@ module.exports = _isNativeReflectConstruct, module.exports.__esModule = true, mo
 function _iterableToArray(iter) {
   if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
 }
-
 module.exports = _iterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -467,35 +428,32 @@ module.exports = _iterableToArray, module.exports.__esModule = true, module.expo
 /***/ (function(module, exports) {
 
 function _iterableToArrayLimit(arr, i) {
-  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
-
-  if (_i == null) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-
-  var _s, _e;
-
-  try {
-    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
+  var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"];
+  if (null != _i) {
+    var _s,
+      _e,
+      _x,
+      _r,
+      _arr = [],
+      _n = !0,
+      _d = !1;
     try {
-      if (!_n && _i["return"] != null) _i["return"]();
+      if (_x = (_i = _i.call(arr)).next, 0 === i) {
+        if (Object(_i) !== _i) return;
+        _n = !1;
+      } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
+    } catch (err) {
+      _d = !0, _e = err;
     } finally {
-      if (_d) throw _e;
+      try {
+        if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return;
+      } finally {
+        if (_d) throw _e;
+      }
     }
+    return _arr;
   }
-
-  return _arr;
 }
-
 module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -510,7 +468,6 @@ module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module
 function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
-
 module.exports = _nonIterableRest, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -525,7 +482,6 @@ module.exports = _nonIterableRest, module.exports.__esModule = true, module.expo
 function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
-
 module.exports = _nonIterableSpread, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -538,19 +494,15 @@ module.exports = _nonIterableSpread, module.exports.__esModule = true, module.ex
 /***/ (function(module, exports, __webpack_require__) {
 
 var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
-
 var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
   } else if (call !== void 0) {
     throw new TypeError("Derived constructors may only return object or undefined");
   }
-
   return assertThisInitialized(self);
 }
-
 module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -563,22 +515,21 @@ module.exports = _possibleConstructorReturn, module.exports.__esModule = true, m
 /***/ (function(module, exports, __webpack_require__) {
 
 var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
-
 function _regeneratorRuntime() {
-  "use strict";
-  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-
+  "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
   module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
     return exports;
   }, module.exports.__esModule = true, module.exports["default"] = module.exports;
   var exports = {},
-      Op = Object.prototype,
-      hasOwn = Op.hasOwnProperty,
-      $Symbol = "function" == typeof Symbol ? Symbol : {},
-      iteratorSymbol = $Symbol.iterator || "@@iterator",
-      asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
-      toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
+    Op = Object.prototype,
+    hasOwn = Op.hasOwnProperty,
+    defineProperty = Object.defineProperty || function (obj, key, desc) {
+      obj[key] = desc.value;
+    },
+    $Symbol = "function" == typeof Symbol ? Symbol : {},
+    iteratorSymbol = $Symbol.iterator || "@@iterator",
+    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
+    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
   function define(obj, key, value) {
     return Object.defineProperty(obj, key, {
       value: value,
@@ -587,7 +538,6 @@ function _regeneratorRuntime() {
       writable: !0
     }), obj[key];
   }
-
   try {
     define({}, "");
   } catch (err) {
@@ -595,54 +545,14 @@ function _regeneratorRuntime() {
       return obj[key] = value;
     };
   }
-
   function wrap(innerFn, outerFn, self, tryLocsList) {
     var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
-        generator = Object.create(protoGenerator.prototype),
-        context = new Context(tryLocsList || []);
-    return generator._invoke = function (innerFn, self, context) {
-      var state = "suspendedStart";
-      return function (method, arg) {
-        if ("executing" === state) throw new Error("Generator is already running");
-
-        if ("completed" === state) {
-          if ("throw" === method) throw arg;
-          return doneResult();
-        }
-
-        for (context.method = method, context.arg = arg;;) {
-          var delegate = context.delegate;
-
-          if (delegate) {
-            var delegateResult = maybeInvokeDelegate(delegate, context);
-
-            if (delegateResult) {
-              if (delegateResult === ContinueSentinel) continue;
-              return delegateResult;
-            }
-          }
-
-          if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
-            if ("suspendedStart" === state) throw state = "completed", context.arg;
-            context.dispatchException(context.arg);
-          } else "return" === context.method && context.abrupt("return", context.arg);
-          state = "executing";
-          var record = tryCatch(innerFn, self, context);
-
-          if ("normal" === record.type) {
-            if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
-            return {
-              value: record.arg,
-              done: context.done
-            };
-          }
-
-          "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
-        }
-      };
-    }(innerFn, self, context), generator;
+      generator = Object.create(protoGenerator.prototype),
+      context = new Context(tryLocsList || []);
+    return defineProperty(generator, "_invoke", {
+      value: makeInvokeMethod(innerFn, self, context)
+    }), generator;
   }
-
   function tryCatch(fn, obj, arg) {
     try {
       return {
@@ -656,25 +566,19 @@ function _regeneratorRuntime() {
       };
     }
   }
-
   exports.wrap = wrap;
   var ContinueSentinel = {};
-
   function Generator() {}
-
   function GeneratorFunction() {}
-
   function GeneratorFunctionPrototype() {}
-
   var IteratorPrototype = {};
   define(IteratorPrototype, iteratorSymbol, function () {
     return this;
   });
   var getProto = Object.getPrototypeOf,
-      NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
   NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
   var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
-
   function defineIteratorMethods(prototype) {
     ["next", "throw", "return"].forEach(function (method) {
       define(prototype, method, function (arg) {
@@ -682,14 +586,12 @@ function _regeneratorRuntime() {
       });
     });
   }
-
   function AsyncIterator(generator, PromiseImpl) {
     function invoke(method, arg, resolve, reject) {
       var record = tryCatch(generator[method], generator, arg);
-
       if ("throw" !== record.type) {
         var result = record.arg,
-            value = result.value;
+          value = result.value;
         return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
           invoke("next", value, resolve, reject);
         }, function (err) {
@@ -700,92 +602,109 @@ function _regeneratorRuntime() {
           return invoke("throw", error, resolve, reject);
         });
       }
-
       reject(record.arg);
     }
-
     var previousPromise;
-
-    this._invoke = function (method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new PromiseImpl(function (resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
+    defineProperty(this, "_invoke", {
+      value: function value(method, arg) {
+        function callInvokeWithMethodAndArg() {
+          return new PromiseImpl(function (resolve, reject) {
+            invoke(method, arg, resolve, reject);
+          });
+        }
+        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
       }
-
-      return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+    });
+  }
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = "suspendedStart";
+    return function (method, arg) {
+      if ("executing" === state) throw new Error("Generator is already running");
+      if ("completed" === state) {
+        if ("throw" === method) throw arg;
+        return doneResult();
+      }
+      for (context.method = method, context.arg = arg;;) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
+          if ("suspendedStart" === state) throw state = "completed", context.arg;
+          context.dispatchException(context.arg);
+        } else "return" === context.method && context.abrupt("return", context.arg);
+        state = "executing";
+        var record = tryCatch(innerFn, self, context);
+        if ("normal" === record.type) {
+          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+          return {
+            value: record.arg,
+            done: context.done
+          };
+        }
+        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+      }
     };
   }
-
   function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-
-    if (undefined === method) {
-      if (context.delegate = null, "throw" === context.method) {
-        if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel;
-        context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
+    var methodName = context.method,
+      method = delegate.iterator[methodName];
+    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
     var record = tryCatch(method, delegate.iterator, context.arg);
     if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
     var info = record.arg;
     return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
   }
-
   function pushTryEntry(locs) {
     var entry = {
       tryLoc: locs[0]
     };
     1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
   }
-
   function resetTryEntry(entry) {
     var record = entry.completion || {};
     record.type = "normal", delete record.arg, entry.completion = record;
   }
-
   function Context(tryLocsList) {
     this.tryEntries = [{
       tryLoc: "root"
     }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
   }
-
   function values(iterable) {
     if (iterable) {
       var iteratorMethod = iterable[iteratorSymbol];
       if (iteratorMethod) return iteratorMethod.call(iterable);
       if ("function" == typeof iterable.next) return iterable;
-
       if (!isNaN(iterable.length)) {
         var i = -1,
-            next = function next() {
-          for (; ++i < iterable.length;) {
-            if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
-          }
-
-          return next.value = undefined, next.done = !0, next;
-        };
-
+          next = function next() {
+            for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
+            return next.value = undefined, next.done = !0, next;
+          };
         return next.next = next;
       }
     }
-
     return {
       next: doneResult
     };
   }
-
   function doneResult() {
     return {
       value: undefined,
       done: !0
     };
   }
-
-  return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
+  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+    value: GeneratorFunctionPrototype,
+    configurable: !0
+  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+    value: GeneratorFunction,
+    configurable: !0
+  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
     var ctor = "function" == typeof genFun && genFun.constructor;
     return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
   }, exports.mark = function (genFun) {
@@ -806,27 +725,21 @@ function _regeneratorRuntime() {
     return this;
   }), define(Gp, "toString", function () {
     return "[object Generator]";
-  }), exports.keys = function (object) {
-    var keys = [];
-
-    for (var key in object) {
-      keys.push(key);
-    }
-
+  }), exports.keys = function (val) {
+    var object = Object(val),
+      keys = [];
+    for (var key in object) keys.push(key);
     return keys.reverse(), function next() {
       for (; keys.length;) {
         var key = keys.pop();
         if (key in object) return next.value = key, next.done = !1, next;
       }
-
       return next.done = !0, next;
     };
   }, exports.values = values, Context.prototype = {
     constructor: Context,
     reset: function reset(skipTempReset) {
-      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
-        "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
-      }
+      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
     },
     stop: function stop() {
       this.done = !0;
@@ -837,20 +750,16 @@ function _regeneratorRuntime() {
     dispatchException: function dispatchException(exception) {
       if (this.done) throw exception;
       var context = this;
-
       function handle(loc, caught) {
         return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
       }
-
       for (var i = this.tryEntries.length - 1; i >= 0; --i) {
         var entry = this.tryEntries[i],
-            record = entry.completion;
+          record = entry.completion;
         if ("root" === entry.tryLoc) return handle("end");
-
         if (entry.tryLoc <= this.prev) {
           var hasCatch = hasOwn.call(entry, "catchLoc"),
-              hasFinally = hasOwn.call(entry, "finallyLoc");
-
+            hasFinally = hasOwn.call(entry, "finallyLoc");
           if (hasCatch && hasFinally) {
             if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
             if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
@@ -866,13 +775,11 @@ function _regeneratorRuntime() {
     abrupt: function abrupt(type, arg) {
       for (var i = this.tryEntries.length - 1; i >= 0; --i) {
         var entry = this.tryEntries[i];
-
         if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
           var finallyEntry = entry;
           break;
         }
       }
-
       finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
       var record = finallyEntry ? finallyEntry.completion : {};
       return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
@@ -890,19 +797,15 @@ function _regeneratorRuntime() {
     "catch": function _catch(tryLoc) {
       for (var i = this.tryEntries.length - 1; i >= 0; --i) {
         var entry = this.tryEntries[i];
-
         if (entry.tryLoc === tryLoc) {
           var record = entry.completion;
-
           if ("throw" === record.type) {
             var thrown = record.arg;
             resetTryEntry(entry);
           }
-
           return thrown;
         }
       }
-
       throw new Error("illegal catch attempt");
     },
     delegateYield: function delegateYield(iterable, resultName, nextLoc) {
@@ -914,7 +817,6 @@ function _regeneratorRuntime() {
     }
   }, exports;
 }
-
 module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -933,7 +835,6 @@ function _setPrototypeOf(o, p) {
   }, module.exports.__esModule = true, module.exports["default"] = module.exports;
   return _setPrototypeOf(o, p);
 }
-
 module.exports = _setPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -946,17 +847,12 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js");
-
 var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
-
 var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-
 var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ "./node_modules/@babel/runtime/helpers/nonIterableRest.js");
-
 function _slicedToArray(arr, i) {
   return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
 }
-
 module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -969,18 +865,52 @@ module.exports = _slicedToArray, module.exports.__esModule = true, module.export
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles.js */ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
-
 var iterableToArray = __webpack_require__(/*! ./iterableToArray.js */ "./node_modules/@babel/runtime/helpers/iterableToArray.js");
-
 var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-
 var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread.js */ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js");
-
 function _toConsumableArray(arr) {
   return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
 }
-
 module.exports = _toConsumableArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/toPrimitive.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toPrimitive.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
+function _toPrimitive(input, hint) {
+  if (_typeof(input) !== "object" || input === null) return input;
+  var prim = input[Symbol.toPrimitive];
+  if (prim !== undefined) {
+    var res = prim.call(input, hint || "default");
+    if (_typeof(res) !== "object") return res;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return (hint === "string" ? String : Number)(input);
+}
+module.exports = _toPrimitive, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/toPropertyKey.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toPropertyKey.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
+var toPrimitive = __webpack_require__(/*! ./toPrimitive.js */ "./node_modules/@babel/runtime/helpers/toPrimitive.js");
+function _toPropertyKey(arg) {
+  var key = toPrimitive(arg, "string");
+  return _typeof(key) === "symbol" ? key : String(key);
+}
+module.exports = _toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -1000,7 +930,6 @@ function _typeof(obj) {
     return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
   }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
 }
-
 module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -1013,7 +942,6 @@ module.exports = _typeof, module.exports.__esModule = true, module.exports["defa
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
   if (typeof o === "string") return arrayLikeToArray(o, minLen);
@@ -1022,7 +950,6 @@ function _unsupportedIterableToArray(o, minLen) {
   if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
 }
-
 module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
@@ -50701,7 +50628,7 @@ var _mkdirp = _interopRequireDefault(__webpack_require__(/*! mkdirp */ "./node_m
 
 var _pixelmatch = _interopRequireDefault(__webpack_require__(/*! pixelmatch */ "./node_modules/pixelmatch/index.js"));
 
-var _tinycolor = _interopRequireDefault(__webpack_require__(/*! tinycolor2 */ "./node_modules/tinycolor2/tinycolor.js"));
+var _tinycolor = _interopRequireDefault(__webpack_require__(/*! tinycolor2 */ "./node_modules/tinycolor2/cjs/tinycolor.js"));
 
 var _phash = _interopRequireDefault(__webpack_require__(/*! ./modules/phash */ "./node_modules/@jimp/core/es/modules/phash.js"));
 
@@ -64402,7 +64329,7 @@ var STRICT_METHOD = arrayMethodIsStrict('forEach');
 // https://tc39.es/ecma262/#sec-array.prototype.foreach
 module.exports = !STRICT_METHOD ? function forEach(callbackfn /* , thisArg */) {
   return $forEach(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
-// eslint-disable-next-line es-x/no-array-prototype-foreach -- safe
+// eslint-disable-next-line es/no-array-prototype-foreach -- safe
 } : [].forEach;
 
 
@@ -64827,6 +64754,25 @@ module.exports = function (object, key, value) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/define-built-in-accessor.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/core-js/internals/define-built-in-accessor.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var makeBuiltIn = __webpack_require__(/*! ../internals/make-built-in */ "./node_modules/core-js/internals/make-built-in.js");
+var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js");
+
+module.exports = function (target, name, descriptor) {
+  if (descriptor.get) makeBuiltIn(descriptor.get, name, { getter: true });
+  if (descriptor.set) makeBuiltIn(descriptor.set, name, { setter: true });
+  return defineProperty.f(target, name, descriptor);
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/define-built-in.js":
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/internals/define-built-in.js ***!
@@ -64874,7 +64820,7 @@ module.exports = function (O, key, value, options) {
 
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
 
-// eslint-disable-next-line es-x/no-object-defineproperty -- safe
+// eslint-disable-next-line es/no-object-defineproperty -- safe
 var defineProperty = Object.defineProperty;
 
 module.exports = function (key, value) {
@@ -64883,28 +64829,6 @@ module.exports = function (key, value) {
   } catch (error) {
     global[key] = value;
   } return value;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/define-well-known-symbol.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/core-js/internals/define-well-known-symbol.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var path = __webpack_require__(/*! ../internals/path */ "./node_modules/core-js/internals/path.js");
-var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
-var wrappedWellKnownSymbolModule = __webpack_require__(/*! ../internals/well-known-symbol-wrapped */ "./node_modules/core-js/internals/well-known-symbol-wrapped.js");
-var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f;
-
-module.exports = function (NAME) {
-  var Symbol = path.Symbol || (path.Symbol = {});
-  if (!hasOwn(Symbol, NAME)) defineProperty(Symbol, NAME, {
-    value: wrappedWellKnownSymbolModule.f(NAME)
-  });
 };
 
 
@@ -64921,9 +64845,30 @@ var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-j
 
 // Detect IE8's incomplete defineProperty implementation
 module.exports = !fails(function () {
-  // eslint-disable-next-line es-x/no-object-defineproperty -- required for testing
+  // eslint-disable-next-line es/no-object-defineproperty -- required for testing
   return Object.defineProperty({}, 1, { get: function () { return 7; } })[1] != 7;
 });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/document-all.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/internals/document-all.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var documentAll = typeof document == 'object' && document.all;
+
+// https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot
+// eslint-disable-next-line unicorn/no-typeof-undefined -- required for testing
+var IS_HTMLDDA = typeof documentAll == 'undefined' && documentAll !== undefined;
+
+module.exports = {
+  all: documentAll,
+  IS_HTMLDDA: IS_HTMLDDA
+};
 
 
 /***/ }),
@@ -65018,11 +64963,9 @@ module.exports = DOMTokenListPrototype === Object.prototype ? undefined : DOMTok
   !*** ./node_modules/core-js/internals/engine-user-agent.js ***!
   \*************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
-
-module.exports = getBuiltIn('navigator', 'userAgent') || '';
+module.exports = typeof navigator != 'undefined' && String(navigator.userAgent) || '';
 
 
 /***/ }),
@@ -65182,7 +65125,7 @@ var FunctionPrototype = Function.prototype;
 var apply = FunctionPrototype.apply;
 var call = FunctionPrototype.call;
 
-// eslint-disable-next-line es-x/no-reflect -- safe
+// eslint-disable-next-line es/no-reflect -- safe
 module.exports = typeof Reflect == 'object' && Reflect.apply || (NATIVE_BIND ? call.bind(apply) : function () {
   return call.apply(apply, arguments);
 });
@@ -65197,7 +65140,7 @@ module.exports = typeof Reflect == 'object' && Reflect.apply || (NATIVE_BIND ? c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this-clause */ "./node_modules/core-js/internals/function-uncurry-this-clause.js");
 var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
 var NATIVE_BIND = __webpack_require__(/*! ../internals/function-bind-native */ "./node_modules/core-js/internals/function-bind-native.js");
 
@@ -65224,7 +65167,7 @@ module.exports = function (fn, that) {
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 
 module.exports = !fails(function () {
-  // eslint-disable-next-line es-x/no-function-prototype-bind -- safe
+  // eslint-disable-next-line es/no-function-prototype-bind -- safe
   var test = (function () { /* empty */ }).bind();
   // eslint-disable-next-line no-prototype-builtins -- safe
   return typeof test != 'function' || test.hasOwnProperty('prototype');
@@ -65262,7 +65205,7 @@ var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_mo
 var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
 
 var FunctionPrototype = Function.prototype;
-// eslint-disable-next-line es-x/no-object-getownpropertydescriptor -- safe
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
 var getDescriptor = DESCRIPTORS && Object.getOwnPropertyDescriptor;
 
 var EXISTS = hasOwn(FunctionPrototype, 'name');
@@ -65279,6 +65222,26 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/function-uncurry-this-clause.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/core-js/internals/function-uncurry-this-clause.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var classofRaw = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+
+module.exports = function (fn) {
+  // Nashorn bug:
+  //   https://github.com/zloirock/core-js/issues/1128
+  //   https://github.com/zloirock/core-js/issues/1130
+  if (classofRaw(fn) === 'Function') return uncurryThis(fn);
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/function-uncurry-this.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/internals/function-uncurry-this.js ***!
@@ -65289,14 +65252,11 @@ module.exports = {
 var NATIVE_BIND = __webpack_require__(/*! ../internals/function-bind-native */ "./node_modules/core-js/internals/function-bind-native.js");
 
 var FunctionPrototype = Function.prototype;
-var bind = FunctionPrototype.bind;
 var call = FunctionPrototype.call;
-var uncurryThis = NATIVE_BIND && bind.bind(call, call);
+var uncurryThisWithBind = NATIVE_BIND && FunctionPrototype.bind.bind(call, call);
 
-module.exports = NATIVE_BIND ? function (fn) {
-  return fn && uncurryThis(fn);
-} : function (fn) {
-  return fn && function () {
+module.exports = NATIVE_BIND ? uncurryThisWithBind : function (fn) {
+  return function () {
     return call.apply(fn, arguments);
   };
 };
@@ -65325,6 +65285,46 @@ module.exports = function (namespace, method) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/get-json-replacer-function.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/core-js/internals/get-json-replacer-function.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var isArray = __webpack_require__(/*! ../internals/is-array */ "./node_modules/core-js/internals/is-array.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
+var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
+
+var push = uncurryThis([].push);
+
+module.exports = function (replacer) {
+  if (isCallable(replacer)) return replacer;
+  if (!isArray(replacer)) return;
+  var rawLength = replacer.length;
+  var keys = [];
+  for (var i = 0; i < rawLength; i++) {
+    var element = replacer[i];
+    if (typeof element == 'string') push(keys, element);
+    else if (typeof element == 'number' || classof(element) == 'Number' || classof(element) == 'String') push(keys, toString(element));
+  }
+  var keysLength = keys.length;
+  var root = true;
+  return function (key, value) {
+    if (root) {
+      root = false;
+      return value;
+    }
+    if (isArray(this)) return value;
+    for (var j = 0; j < keysLength; j++) if (keys[j] === key) return value;
+  };
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/get-method.js":
 /*!******************************************************!*\
   !*** ./node_modules/core-js/internals/get-method.js ***!
@@ -65333,12 +65333,13 @@ module.exports = function (namespace, method) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
+var isNullOrUndefined = __webpack_require__(/*! ../internals/is-null-or-undefined */ "./node_modules/core-js/internals/is-null-or-undefined.js");
 
 // `GetMethod` abstract operation
 // https://tc39.es/ecma262/#sec-getmethod
 module.exports = function (V, P) {
   var func = V[P];
-  return func == null ? undefined : aCallable(func);
+  return isNullOrUndefined(func) ? undefined : aCallable(func);
 };
 
 
@@ -65357,7 +65358,7 @@ module.exports = function (V, P) {
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
 module.exports =
-  // eslint-disable-next-line es-x/no-global-this -- safe
+  // eslint-disable-next-line es/no-global-this -- safe
   check(typeof globalThis == 'object' && globalThis) ||
   check(typeof window == 'object' && window) ||
   // eslint-disable-next-line no-restricted-globals -- safe
@@ -65384,7 +65385,7 @@ var hasOwnProperty = uncurryThis({}.hasOwnProperty);
 
 // `HasOwnProperty` abstract operation
 // https://tc39.es/ecma262/#sec-hasownproperty
-// eslint-disable-next-line es-x/no-object-hasown -- safe
+// eslint-disable-next-line es/no-object-hasown -- safe
 module.exports = Object.hasOwn || function hasOwn(it, key) {
   return hasOwnProperty(toObject(it), key);
 };
@@ -65431,7 +65432,7 @@ var createElement = __webpack_require__(/*! ../internals/document-create-element
 
 // Thanks to IE8 for its funny defineProperty
 module.exports = !DESCRIPTORS && !fails(function () {
-  // eslint-disable-next-line es-x/no-object-defineproperty -- required for testing
+  // eslint-disable-next-line es/no-object-defineproperty -- required for testing
   return Object.defineProperty(createElement('div'), 'a', {
     get: function () { return 7; }
   }).a != 7;
@@ -65498,9 +65499,8 @@ module.exports = store.inspectSource;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var NATIVE_WEAK_MAP = __webpack_require__(/*! ../internals/native-weak-map */ "./node_modules/core-js/internals/native-weak-map.js");
+var NATIVE_WEAK_MAP = __webpack_require__(/*! ../internals/weak-map-basic-detection */ "./node_modules/core-js/internals/weak-map-basic-detection.js");
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
 var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
 var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "./node_modules/core-js/internals/create-non-enumerable-property.js");
 var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
@@ -65528,26 +65528,28 @@ var getterFor = function (TYPE) {
 
 if (NATIVE_WEAK_MAP || shared.state) {
   var store = shared.state || (shared.state = new WeakMap());
-  var wmget = uncurryThis(store.get);
-  var wmhas = uncurryThis(store.has);
-  var wmset = uncurryThis(store.set);
+  /* eslint-disable no-self-assign -- prototype methods protection */
+  store.get = store.get;
+  store.has = store.has;
+  store.set = store.set;
+  /* eslint-enable no-self-assign -- prototype methods protection */
   set = function (it, metadata) {
-    if (wmhas(store, it)) throw new TypeError(OBJECT_ALREADY_INITIALIZED);
+    if (store.has(it)) throw TypeError(OBJECT_ALREADY_INITIALIZED);
     metadata.facade = it;
-    wmset(store, it, metadata);
+    store.set(it, metadata);
     return metadata;
   };
   get = function (it) {
-    return wmget(store, it) || {};
+    return store.get(it) || {};
   };
   has = function (it) {
-    return wmhas(store, it);
+    return store.has(it);
   };
 } else {
   var STATE = sharedKey('state');
   hiddenKeys[STATE] = true;
   set = function (it, metadata) {
-    if (hasOwn(it, STATE)) throw new TypeError(OBJECT_ALREADY_INITIALIZED);
+    if (hasOwn(it, STATE)) throw TypeError(OBJECT_ALREADY_INITIALIZED);
     metadata.facade = it;
     createNonEnumerableProperty(it, STATE, metadata);
     return metadata;
@@ -65582,7 +65584,7 @@ var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_module
 
 // `IsArray` abstract operation
 // https://tc39.es/ecma262/#sec-isarray
-// eslint-disable-next-line es-x/no-array-isarray -- safe
+// eslint-disable-next-line es/no-array-isarray -- safe
 module.exports = Array.isArray || function isArray(argument) {
   return classof(argument) == 'Array';
 };
@@ -65595,11 +65597,17 @@ module.exports = Array.isArray || function isArray(argument) {
   !*** ./node_modules/core-js/internals/is-callable.js ***!
   \*******************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var $documentAll = __webpack_require__(/*! ../internals/document-all */ "./node_modules/core-js/internals/document-all.js");
+
+var documentAll = $documentAll.all;
 
 // `IsCallable` abstract operation
 // https://tc39.es/ecma262/#sec-iscallable
-module.exports = function (argument) {
+module.exports = $documentAll.IS_HTMLDDA ? function (argument) {
+  return typeof argument == 'function' || argument === documentAll;
+} : function (argument) {
   return typeof argument == 'function';
 };
 
@@ -65702,6 +65710,22 @@ module.exports = isForced;
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/is-null-or-undefined.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/internals/is-null-or-undefined.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// we can't use just `it == null` since of `document.all` special case
+// https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot-aec
+module.exports = function (it) {
+  return it === null || it === undefined;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/is-object.js":
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/internals/is-object.js ***!
@@ -65710,8 +65734,13 @@ module.exports = isForced;
 /***/ (function(module, exports, __webpack_require__) {
 
 var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+var $documentAll = __webpack_require__(/*! ../internals/document-all */ "./node_modules/core-js/internals/document-all.js");
 
-module.exports = function (it) {
+var documentAll = $documentAll.all;
+
+module.exports = $documentAll.IS_HTMLDDA ? function (it) {
+  return typeof it == 'object' ? it !== null : isCallable(it) || it === documentAll;
+} : function (it) {
   return typeof it == 'object' ? it !== null : isCallable(it);
 };
 
@@ -65779,6 +65808,7 @@ module.exports = function (obj) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
 var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
@@ -65789,8 +65819,12 @@ var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */
 
 var enforceInternalState = InternalStateModule.enforce;
 var getInternalState = InternalStateModule.get;
-// eslint-disable-next-line es-x/no-object-defineproperty -- safe
+var $String = String;
+// eslint-disable-next-line es/no-object-defineproperty -- safe
 var defineProperty = Object.defineProperty;
+var stringSlice = uncurryThis(''.slice);
+var replace = uncurryThis(''.replace);
+var join = uncurryThis([].join);
 
 var CONFIGURABLE_LENGTH = DESCRIPTORS && !fails(function () {
   return defineProperty(function () { /* empty */ }, 'length', { value: 8 }).length !== 8;
@@ -65799,8 +65833,8 @@ var CONFIGURABLE_LENGTH = DESCRIPTORS && !fails(function () {
 var TEMPLATE = String(String).split('String');
 
 var makeBuiltIn = module.exports = function (value, name, options) {
-  if (String(name).slice(0, 7) === 'Symbol(') {
-    name = '[' + String(name).replace(/^Symbol\(([^)]*)\)/, '$1') + ']';
+  if (stringSlice($String(name), 0, 7) === 'Symbol(') {
+    name = '[' + replace($String(name), /^Symbol\(([^)]*)\)/, '$1') + ']';
   }
   if (options && options.getter) name = 'get ' + name;
   if (options && options.setter) name = 'set ' + name;
@@ -65819,7 +65853,7 @@ var makeBuiltIn = module.exports = function (value, name, options) {
   } catch (error) { /* empty */ }
   var state = enforceInternalState(value);
   if (!hasOwn(state, 'source')) {
-    state.source = TEMPLATE.join(typeof name == 'string' ? name : '');
+    state.source = join(TEMPLATE, typeof name == 'string' ? name : '');
   } return value;
 };
 
@@ -65844,68 +65878,11 @@ var floor = Math.floor;
 
 // `Math.trunc` method
 // https://tc39.es/ecma262/#sec-math.trunc
-// eslint-disable-next-line es-x/no-math-trunc -- safe
+// eslint-disable-next-line es/no-math-trunc -- safe
 module.exports = Math.trunc || function trunc(x) {
   var n = +x;
   return (n > 0 ? floor : ceil)(n);
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/native-symbol-registry.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/core-js/internals/native-symbol-registry.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
-
-/* eslint-disable es-x/no-symbol -- safe */
-module.exports = NATIVE_SYMBOL && !!Symbol['for'] && !!Symbol.keyFor;
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/native-symbol.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/core-js/internals/native-symbol.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* eslint-disable es-x/no-symbol -- required for testing */
-var V8_VERSION = __webpack_require__(/*! ../internals/engine-v8-version */ "./node_modules/core-js/internals/engine-v8-version.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
-
-// eslint-disable-next-line es-x/no-object-getownpropertysymbols -- required for testing
-module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
-  var symbol = Symbol();
-  // Chrome 38 Symbol has incorrect toString conversion
-  // `get-own-property-symbols` polyfill symbols converted to object are not Symbol instances
-  return !String(symbol) || !(Object(symbol) instanceof Symbol) ||
-    // Chrome 38-40 symbols are not inherited from DOM collections prototypes to instances
-    !Symbol.sham && V8_VERSION && V8_VERSION < 41;
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/native-weak-map.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/core-js/internals/native-weak-map.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
-var inspectSource = __webpack_require__(/*! ../internals/inspect-source */ "./node_modules/core-js/internals/inspect-source.js");
-
-var WeakMap = global.WeakMap;
-
-module.exports = isCallable(WeakMap) && /native code/.test(inspectSource(WeakMap));
 
 
 /***/ }),
@@ -65988,7 +65965,7 @@ hiddenKeys[IE_PROTO] = true;
 
 // `Object.create` method
 // https://tc39.es/ecma262/#sec-object.create
-// eslint-disable-next-line es-x/no-object-create -- safe
+// eslint-disable-next-line es/no-object-create -- safe
 module.exports = Object.create || function create(O, Properties) {
   var result;
   if (O !== null) {
@@ -66020,7 +65997,7 @@ var objectKeys = __webpack_require__(/*! ../internals/object-keys */ "./node_mod
 
 // `Object.defineProperties` method
 // https://tc39.es/ecma262/#sec-object.defineproperties
-// eslint-disable-next-line es-x/no-object-defineproperties -- safe
+// eslint-disable-next-line es/no-object-defineproperties -- safe
 exports.f = DESCRIPTORS && !V8_PROTOTYPE_DEFINE_BUG ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
   var props = toIndexedObject(Properties);
@@ -66049,9 +66026,9 @@ var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules
 var toPropertyKey = __webpack_require__(/*! ../internals/to-property-key */ "./node_modules/core-js/internals/to-property-key.js");
 
 var $TypeError = TypeError;
-// eslint-disable-next-line es-x/no-object-defineproperty -- safe
+// eslint-disable-next-line es/no-object-defineproperty -- safe
 var $defineProperty = Object.defineProperty;
-// eslint-disable-next-line es-x/no-object-getownpropertydescriptor -- safe
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
 var $getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 var ENUMERABLE = 'enumerable';
 var CONFIGURABLE = 'configurable';
@@ -66105,7 +66082,7 @@ var toPropertyKey = __webpack_require__(/*! ../internals/to-property-key */ "./n
 var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
 var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ "./node_modules/core-js/internals/ie8-dom-define.js");
 
-// eslint-disable-next-line es-x/no-object-getownpropertydescriptor -- safe
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
 var $getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
 // `Object.getOwnPropertyDescriptor` method
@@ -66129,7 +66106,7 @@ exports.f = DESCRIPTORS ? $getOwnPropertyDescriptor : function getOwnPropertyDes
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* eslint-disable es-x/no-object-getownpropertynames -- safe */
+/* eslint-disable es/no-object-getownpropertynames -- safe */
 var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
 var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
 var $getOwnPropertyNames = __webpack_require__(/*! ../internals/object-get-own-property-names */ "./node_modules/core-js/internals/object-get-own-property-names.js").f;
@@ -66170,7 +66147,7 @@ var hiddenKeys = enumBugKeys.concat('length', 'prototype');
 
 // `Object.getOwnPropertyNames` method
 // https://tc39.es/ecma262/#sec-object.getownpropertynames
-// eslint-disable-next-line es-x/no-object-getownpropertynames -- safe
+// eslint-disable-next-line es/no-object-getownpropertynames -- safe
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return internalObjectKeys(O, hiddenKeys);
 };
@@ -66185,7 +66162,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// eslint-disable-next-line es-x/no-object-getownpropertysymbols -- safe
+// eslint-disable-next-line es/no-object-getownpropertysymbols -- safe
 exports.f = Object.getOwnPropertySymbols;
 
 
@@ -66248,7 +66225,7 @@ var enumBugKeys = __webpack_require__(/*! ../internals/enum-bug-keys */ "./node_
 
 // `Object.keys` method
 // https://tc39.es/ecma262/#sec-object.keys
-// eslint-disable-next-line es-x/no-object-keys -- safe
+// eslint-disable-next-line es/no-object-keys -- safe
 module.exports = Object.keys || function keys(O) {
   return internalObjectKeys(O, enumBugKeys);
 };
@@ -66266,7 +66243,7 @@ module.exports = Object.keys || function keys(O) {
 "use strict";
 
 var $propertyIsEnumerable = {}.propertyIsEnumerable;
-// eslint-disable-next-line es-x/no-object-getownpropertydescriptor -- safe
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
 var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
 // Nashorn ~ JDK8 bug
@@ -66399,14 +66376,16 @@ module.exports = global;
   !*** ./node_modules/core-js/internals/require-object-coercible.js ***!
   \********************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var isNullOrUndefined = __webpack_require__(/*! ../internals/is-null-or-undefined */ "./node_modules/core-js/internals/is-null-or-undefined.js");
 
 var $TypeError = TypeError;
 
 // `RequireObjectCoercible` abstract operation
 // https://tc39.es/ecma262/#sec-requireobjectcoercible
 module.exports = function (it) {
-  if (it == undefined) throw $TypeError("Can't call method on " + it);
+  if (isNullOrUndefined(it)) throw $TypeError("Can't call method on " + it);
   return it;
 };
 
@@ -66486,11 +66465,35 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.23.5',
+  version: '3.29.1',
   mode: IS_PURE ? 'pure' : 'global',
-  copyright: '© 2014-2022 Denis Pushkarev (zloirock.ru)',
-  license: 'https://github.com/zloirock/core-js/blob/v3.23.5/LICENSE',
+  copyright: '© 2014-2023 Denis Pushkarev (zloirock.ru)',
+  license: 'https://github.com/zloirock/core-js/blob/v3.29.1/LICENSE',
   source: 'https://github.com/zloirock/core-js'
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/symbol-constructor-detection.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/core-js/internals/symbol-constructor-detection.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* eslint-disable es/no-symbol -- required for testing */
+var V8_VERSION = __webpack_require__(/*! ../internals/engine-v8-version */ "./node_modules/core-js/internals/engine-v8-version.js");
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+
+// eslint-disable-next-line es/no-object-getownpropertysymbols -- required for testing
+module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
+  var symbol = Symbol();
+  // Chrome 38 Symbol has incorrect toString conversion
+  // `get-own-property-symbols` polyfill symbols converted to object are not Symbol instances
+  return !String(symbol) || !(Object(symbol) instanceof Symbol) ||
+    // Chrome 38-40 symbols are not inherited from DOM collections prototypes to instances
+    !Symbol.sham && V8_VERSION && V8_VERSION < 41;
 });
 
 
@@ -66523,6 +66526,21 @@ module.exports = function () {
     }, { arity: 1 });
   }
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/symbol-registry-detection.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/core-js/internals/symbol-registry-detection.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/symbol-constructor-detection */ "./node_modules/core-js/internals/symbol-constructor-detection.js");
+
+/* eslint-disable es/no-symbol -- safe */
+module.exports = NATIVE_SYMBOL && !!Symbol['for'] && !!Symbol.keyFor;
 
 
 /***/ }),
@@ -66769,8 +66787,8 @@ module.exports = function (key) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* eslint-disable es-x/no-symbol -- required for testing */
-var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
+/* eslint-disable es/no-symbol -- required for testing */
+var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/symbol-constructor-detection */ "./node_modules/core-js/internals/symbol-constructor-detection.js");
 
 module.exports = NATIVE_SYMBOL
   && !Symbol.sham
@@ -66792,12 +66810,51 @@ var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-j
 // V8 ~ Chrome 36-
 // https://bugs.chromium.org/p/v8/issues/detail?id=3334
 module.exports = DESCRIPTORS && fails(function () {
-  // eslint-disable-next-line es-x/no-object-defineproperty -- required for testing
+  // eslint-disable-next-line es/no-object-defineproperty -- required for testing
   return Object.defineProperty(function () { /* empty */ }, 'prototype', {
     value: 42,
     writable: false
   }).prototype != 42;
 });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/weak-map-basic-detection.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/core-js/internals/weak-map-basic-detection.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+
+var WeakMap = global.WeakMap;
+
+module.exports = isCallable(WeakMap) && /native code/.test(String(WeakMap));
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/well-known-symbol-define.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/core-js/internals/well-known-symbol-define.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var path = __webpack_require__(/*! ../internals/path */ "./node_modules/core-js/internals/path.js");
+var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
+var wrappedWellKnownSymbolModule = __webpack_require__(/*! ../internals/well-known-symbol-wrapped */ "./node_modules/core-js/internals/well-known-symbol-wrapped.js");
+var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f;
+
+module.exports = function (NAME) {
+  var Symbol = path.Symbol || (path.Symbol = {});
+  if (!hasOwn(Symbol, NAME)) defineProperty(Symbol, NAME, {
+    value: wrappedWellKnownSymbolModule.f(NAME)
+  });
+};
 
 
 /***/ }),
@@ -66827,24 +66884,18 @@ var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core
 var shared = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js");
 var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
 var uid = __webpack_require__(/*! ../internals/uid */ "./node_modules/core-js/internals/uid.js");
-var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
+var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/symbol-constructor-detection */ "./node_modules/core-js/internals/symbol-constructor-detection.js");
 var USE_SYMBOL_AS_UID = __webpack_require__(/*! ../internals/use-symbol-as-uid */ "./node_modules/core-js/internals/use-symbol-as-uid.js");
 
-var WellKnownSymbolsStore = shared('wks');
 var Symbol = global.Symbol;
-var symbolFor = Symbol && Symbol['for'];
-var createWellKnownSymbol = USE_SYMBOL_AS_UID ? Symbol : Symbol && Symbol.withoutSetter || uid;
+var WellKnownSymbolsStore = shared('wks');
+var createWellKnownSymbol = USE_SYMBOL_AS_UID ? Symbol['for'] || Symbol : Symbol && Symbol.withoutSetter || uid;
 
 module.exports = function (name) {
-  if (!hasOwn(WellKnownSymbolsStore, name) || !(NATIVE_SYMBOL || typeof WellKnownSymbolsStore[name] == 'string')) {
-    var description = 'Symbol.' + name;
-    if (NATIVE_SYMBOL && hasOwn(Symbol, name)) {
-      WellKnownSymbolsStore[name] = Symbol[name];
-    } else if (USE_SYMBOL_AS_UID && symbolFor) {
-      WellKnownSymbolsStore[name] = symbolFor(description);
-    } else {
-      WellKnownSymbolsStore[name] = createWellKnownSymbol(description);
-    }
+  if (!hasOwn(WellKnownSymbolsStore, name)) {
+    WellKnownSymbolsStore[name] = NATIVE_SYMBOL && hasOwn(Symbol, name)
+      ? Symbol[name]
+      : createWellKnownSymbol('Symbol.' + name);
   } return WellKnownSymbolsStore[name];
 };
 
@@ -66892,7 +66943,7 @@ var forEach = __webpack_require__(/*! ../internals/array-for-each */ "./node_mod
 
 // `Array.prototype.forEach` method
 // https://tc39.es/ecma262/#sec-array.prototype.foreach
-// eslint-disable-next-line es-x/no-array-prototype-foreach -- safe
+// eslint-disable-next-line es/no-array-prototype-foreach -- safe
 $({ target: 'Array', proto: true, forced: [].forEach != forEach }, {
   forEach: forEach
 });
@@ -66932,13 +66983,13 @@ var apply = __webpack_require__(/*! ../internals/function-apply */ "./node_modul
 var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
 var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
-var isArray = __webpack_require__(/*! ../internals/is-array */ "./node_modules/core-js/internals/is-array.js");
 var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
-var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
 var isSymbol = __webpack_require__(/*! ../internals/is-symbol */ "./node_modules/core-js/internals/is-symbol.js");
 var arraySlice = __webpack_require__(/*! ../internals/array-slice */ "./node_modules/core-js/internals/array-slice.js");
-var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
+var getReplacerFunction = __webpack_require__(/*! ../internals/get-json-replacer-function */ "./node_modules/core-js/internals/get-json-replacer-function.js");
+var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/symbol-constructor-detection */ "./node_modules/core-js/internals/symbol-constructor-detection.js");
 
+var $String = String;
 var $stringify = getBuiltIn('JSON', 'stringify');
 var exec = uncurryThis(/./.exec);
 var charAt = uncurryThis(''.charAt);
@@ -66968,13 +67019,13 @@ var ILL_FORMED_UNICODE = fails(function () {
 
 var stringifyWithSymbolsFix = function (it, replacer) {
   var args = arraySlice(arguments);
-  var $replacer = replacer;
-  if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
-  if (!isArray(replacer)) replacer = function (key, value) {
-    if (isCallable($replacer)) value = call($replacer, this, key, value);
+  var $replacer = getReplacerFunction(replacer);
+  if (!isCallable($replacer) && (it === undefined || isSymbol(it))) return; // IE8 returns string on undefined
+  args[1] = function (key, value) {
+    // some old implementations (like WebKit) could pass numbers as keys
+    if (isCallable($replacer)) value = call($replacer, this, $String(key), value);
     if (!isSymbol(value)) return value;
   };
-  args[1] = replacer;
   return apply($stringify, null, args);
 };
 
@@ -67015,7 +67066,7 @@ var defineProperties = __webpack_require__(/*! ../internals/object-define-proper
 
 // `Object.defineProperties` method
 // https://tc39.es/ecma262/#sec-object.defineproperties
-// eslint-disable-next-line es-x/no-object-defineproperties -- safe
+// eslint-disable-next-line es/no-object-defineproperties -- safe
 $({ target: 'Object', stat: true, forced: Object.defineProperties !== defineProperties, sham: !DESCRIPTORS }, {
   defineProperties: defineProperties
 });
@@ -67036,7 +67087,7 @@ var defineProperty = __webpack_require__(/*! ../internals/object-define-property
 
 // `Object.defineProperty` method
 // https://tc39.es/ecma262/#sec-object.defineproperty
-// eslint-disable-next-line es-x/no-object-defineproperty -- safe
+// eslint-disable-next-line es/no-object-defineproperty -- safe
 $({ target: 'Object', stat: true, forced: Object.defineProperty !== defineProperty, sham: !DESCRIPTORS }, {
   defineProperty: defineProperty
 });
@@ -67078,8 +67129,7 @@ var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ 
 var nativeGetOwnPropertyDescriptor = __webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "./node_modules/core-js/internals/object-get-own-property-descriptor.js").f;
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
 
-var FAILS_ON_PRIMITIVES = fails(function () { nativeGetOwnPropertyDescriptor(1); });
-var FORCED = !DESCRIPTORS || FAILS_ON_PRIMITIVES;
+var FORCED = !DESCRIPTORS || fails(function () { nativeGetOwnPropertyDescriptor(1); });
 
 // `Object.getOwnPropertyDescriptor` method
 // https://tc39.es/ecma262/#sec-object.getownpropertydescriptor
@@ -67135,7 +67185,7 @@ $({ target: 'Object', stat: true, sham: !DESCRIPTORS }, {
 /***/ (function(module, exports, __webpack_require__) {
 
 var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
+var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/symbol-constructor-detection */ "./node_modules/core-js/internals/symbol-constructor-detection.js");
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var getOwnPropertySymbolsModule = __webpack_require__(/*! ../internals/object-get-own-property-symbols */ "./node_modules/core-js/internals/object-get-own-property-symbols.js");
 var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
@@ -67196,7 +67246,7 @@ var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules
 var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
 var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
-var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
+var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/symbol-constructor-detection */ "./node_modules/core-js/internals/symbol-constructor-detection.js");
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
 var isPrototypeOf = __webpack_require__(/*! ../internals/object-is-prototype-of */ "./node_modules/core-js/internals/object-is-prototype-of.js");
@@ -67215,13 +67265,14 @@ var definePropertyModule = __webpack_require__(/*! ../internals/object-define-pr
 var definePropertiesModule = __webpack_require__(/*! ../internals/object-define-properties */ "./node_modules/core-js/internals/object-define-properties.js");
 var propertyIsEnumerableModule = __webpack_require__(/*! ../internals/object-property-is-enumerable */ "./node_modules/core-js/internals/object-property-is-enumerable.js");
 var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "./node_modules/core-js/internals/define-built-in.js");
+var defineBuiltInAccessor = __webpack_require__(/*! ../internals/define-built-in-accessor */ "./node_modules/core-js/internals/define-built-in-accessor.js");
 var shared = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js");
 var sharedKey = __webpack_require__(/*! ../internals/shared-key */ "./node_modules/core-js/internals/shared-key.js");
 var hiddenKeys = __webpack_require__(/*! ../internals/hidden-keys */ "./node_modules/core-js/internals/hidden-keys.js");
 var uid = __webpack_require__(/*! ../internals/uid */ "./node_modules/core-js/internals/uid.js");
 var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
 var wrappedWellKnownSymbolModule = __webpack_require__(/*! ../internals/well-known-symbol-wrapped */ "./node_modules/core-js/internals/well-known-symbol-wrapped.js");
-var defineWellKnownSymbol = __webpack_require__(/*! ../internals/define-well-known-symbol */ "./node_modules/core-js/internals/define-well-known-symbol.js");
+var defineWellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol-define */ "./node_modules/core-js/internals/well-known-symbol-define.js");
 var defineSymbolToPrimitive = __webpack_require__(/*! ../internals/symbol-define-to-primitive */ "./node_modules/core-js/internals/symbol-define-to-primitive.js");
 var setToStringTag = __webpack_require__(/*! ../internals/set-to-string-tag */ "./node_modules/core-js/internals/set-to-string-tag.js");
 var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "./node_modules/core-js/internals/internal-state.js");
@@ -67386,7 +67437,7 @@ if (!NATIVE_SYMBOL) {
 
   if (DESCRIPTORS) {
     // https://github.com/tc39/proposal-Symbol-description
-    nativeDefineProperty(SymbolPrototype, 'description', {
+    defineBuiltInAccessor(SymbolPrototype, 'description', {
       configurable: true,
       get: function description() {
         return getInternalState(this).description;
@@ -67457,7 +67508,7 @@ var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_mo
 var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
 var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
 var shared = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js");
-var NATIVE_SYMBOL_REGISTRY = __webpack_require__(/*! ../internals/native-symbol-registry */ "./node_modules/core-js/internals/native-symbol-registry.js");
+var NATIVE_SYMBOL_REGISTRY = __webpack_require__(/*! ../internals/symbol-registry-detection */ "./node_modules/core-js/internals/symbol-registry-detection.js");
 
 var StringToSymbolRegistry = shared('string-to-symbol-registry');
 var SymbolToStringRegistry = shared('symbol-to-string-registry');
@@ -67507,7 +67558,7 @@ var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_mo
 var isSymbol = __webpack_require__(/*! ../internals/is-symbol */ "./node_modules/core-js/internals/is-symbol.js");
 var tryToString = __webpack_require__(/*! ../internals/try-to-string */ "./node_modules/core-js/internals/try-to-string.js");
 var shared = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js");
-var NATIVE_SYMBOL_REGISTRY = __webpack_require__(/*! ../internals/native-symbol-registry */ "./node_modules/core-js/internals/native-symbol-registry.js");
+var NATIVE_SYMBOL_REGISTRY = __webpack_require__(/*! ../internals/symbol-registry-detection */ "./node_modules/core-js/internals/symbol-registry-detection.js");
 
 var SymbolToStringRegistry = shared('symbol-to-string-registry');
 
@@ -86215,7 +86266,7 @@ var Stream = __webpack_require__(/*! ./internal/streams/stream */ "./node_module
 /*<replacement>*/
 
 var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/readable-stream/node_modules/safe-buffer/index.js").Buffer;
-var OurUint8Array = global.Uint8Array || function () {};
+var OurUint8Array = (typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : {}).Uint8Array || function () {};
 function _uint8ArrayToBuffer(chunk) {
   return Buffer.from(chunk);
 }
@@ -86785,8 +86836,8 @@ Readable.prototype.pipe = function (dest, pipeOpts) {
       // also returned false.
       // => Check whether `dest` is still a piping destination.
       if ((state.pipesCount === 1 && state.pipes === dest || state.pipesCount > 1 && indexOf(state.pipes, dest) !== -1) && !cleanedUp) {
-        debug('false write response, pause', src._readableState.awaitDrain);
-        src._readableState.awaitDrain++;
+        debug('false write response, pause', state.awaitDrain);
+        state.awaitDrain++;
         increasedAwaitDrain = true;
       }
       src.pause();
@@ -86880,7 +86931,7 @@ Readable.prototype.unpipe = function (dest) {
     state.flowing = false;
 
     for (var i = 0; i < len; i++) {
-      dests[i].emit('unpipe', this, unpipeInfo);
+      dests[i].emit('unpipe', this, { hasUnpiped: false });
     }return this;
   }
 
@@ -87499,7 +87550,7 @@ var Stream = __webpack_require__(/*! ./internal/streams/stream */ "./node_module
 /*<replacement>*/
 
 var Buffer = __webpack_require__(/*! safe-buffer */ "./node_modules/readable-stream/node_modules/safe-buffer/index.js").Buffer;
-var OurUint8Array = global.Uint8Array || function () {};
+var OurUint8Array = (typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : {}).Uint8Array || function () {};
 function _uint8ArrayToBuffer(chunk) {
   return Buffer.from(chunk);
 }
@@ -87767,7 +87818,7 @@ Writable.prototype.uncork = function () {
   if (state.corked) {
     state.corked--;
 
-    if (!state.writing && !state.corked && !state.finished && !state.bufferProcessing && state.bufferedRequest) clearBuffer(this, state);
+    if (!state.writing && !state.corked && !state.bufferProcessing && state.bufferedRequest) clearBuffer(this, state);
   }
 };
 
@@ -88009,7 +88060,7 @@ Writable.prototype.end = function (chunk, encoding, cb) {
   }
 
   // ignore unnecessary end() calls.
-  if (!state.ending && !state.finished) endWritable(this, state, cb);
+  if (!state.ending) endWritable(this, state, cb);
 };
 
 function needFinish(state) {
@@ -88070,11 +88121,9 @@ function onCorkedFinish(corkReq, state, err) {
     cb(err);
     entry = entry.next;
   }
-  if (state.corkedRequestsFree) {
-    state.corkedRequestsFree.next = corkReq;
-  } else {
-    state.corkedRequestsFree = corkReq;
-  }
+
+  // reuse the free corkReq.
+  state.corkedRequestsFree.next = corkReq;
 }
 
 Object.defineProperty(Writable.prototype, 'destroyed', {
@@ -88173,7 +88222,6 @@ module.exports = function () {
 
   BufferList.prototype.concat = function concat(n) {
     if (this.length === 0) return Buffer.alloc(0);
-    if (this.length === 1) return this.head.data;
     var ret = Buffer.allocUnsafe(n >>> 0);
     var p = this.head;
     var i = 0;
@@ -88222,9 +88270,15 @@ function destroy(err, cb) {
   if (readableDestroyed || writableDestroyed) {
     if (cb) {
       cb(err);
-    } else if (err && (!this._writableState || !this._writableState.errorEmitted)) {
-      pna.nextTick(emitErrorNT, this, err);
+    } else if (err) {
+      if (!this._writableState) {
+        pna.nextTick(emitErrorNT, this, err);
+      } else if (!this._writableState.errorEmitted) {
+        this._writableState.errorEmitted = true;
+        pna.nextTick(emitErrorNT, this, err);
+      }
     }
+
     return this;
   }
 
@@ -88242,9 +88296,11 @@ function destroy(err, cb) {
 
   this._destroy(err || null, function (err) {
     if (!cb && err) {
-      pna.nextTick(emitErrorNT, _this, err);
-      if (_this._writableState) {
+      if (!_this._writableState) {
+        pna.nextTick(emitErrorNT, _this, err);
+      } else if (!_this._writableState.errorEmitted) {
         _this._writableState.errorEmitted = true;
+        pna.nextTick(emitErrorNT, _this, err);
       }
     } else if (cb) {
       cb(err);
@@ -88266,6 +88322,8 @@ function undestroy() {
     this._writableState.destroyed = false;
     this._writableState.ended = false;
     this._writableState.ending = false;
+    this._writableState.finalCalled = false;
+    this._writableState.prefinished = false;
     this._writableState.finished = false;
     this._writableState.errorEmitted = false;
   }
@@ -90157,818 +90215,794 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
-/***/ "./node_modules/tinycolor2/tinycolor.js":
-/*!**********************************************!*\
-  !*** ./node_modules/tinycolor2/tinycolor.js ***!
-  \**********************************************/
+/***/ "./node_modules/tinycolor2/cjs/tinycolor.js":
+/*!**************************************************!*\
+  !*** ./node_modules/tinycolor2/cjs/tinycolor.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;// TinyColor v1.4.2
-// https://github.com/bgrins/TinyColor
-// Brian Grinstead, MIT License
+// This file is autogenerated. It's used to publish CJS to npm.
+(function (global, factory) {
+   true ? module.exports = factory() :
+  undefined;
+})(this, (function () { 'use strict';
 
-(function(Math) {
+  function _typeof(obj) {
+    "@babel/helpers - typeof";
 
-var trimLeft = /^\s+/,
-    trimRight = /\s+$/,
-    tinyCounter = 0,
-    mathRound = Math.round,
-    mathMin = Math.min,
-    mathMax = Math.max,
-    mathRandom = Math.random;
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+      return typeof obj;
+    } : function (obj) {
+      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    }, _typeof(obj);
+  }
 
-function tinycolor (color, opts) {
+  // https://github.com/bgrins/TinyColor
+  // Brian Grinstead, MIT License
 
-    color = (color) ? color : '';
-    opts = opts || { };
+  var trimLeft = /^\s+/;
+  var trimRight = /\s+$/;
+  function tinycolor(color, opts) {
+    color = color ? color : "";
+    opts = opts || {};
 
     // If input is already a tinycolor, return itself
     if (color instanceof tinycolor) {
-       return color;
+      return color;
     }
     // If we are called as a function, call using new instead
     if (!(this instanceof tinycolor)) {
-        return new tinycolor(color, opts);
+      return new tinycolor(color, opts);
     }
-
     var rgb = inputToRGB(color);
-    this._originalInput = color,
-    this._r = rgb.r,
-    this._g = rgb.g,
-    this._b = rgb.b,
-    this._a = rgb.a,
-    this._roundA = mathRound(100*this._a) / 100,
-    this._format = opts.format || rgb.format;
+    this._originalInput = color, this._r = rgb.r, this._g = rgb.g, this._b = rgb.b, this._a = rgb.a, this._roundA = Math.round(100 * this._a) / 100, this._format = opts.format || rgb.format;
     this._gradientType = opts.gradientType;
 
     // Don't let the range of [0,255] come back in [0,1].
     // Potentially lose a little bit of precision here, but will fix issues where
     // .5 gets interpreted as half of the total, instead of half of 1
     // If it was supposed to be 128, this was already taken care of by `inputToRgb`
-    if (this._r < 1) { this._r = mathRound(this._r); }
-    if (this._g < 1) { this._g = mathRound(this._g); }
-    if (this._b < 1) { this._b = mathRound(this._b); }
-
+    if (this._r < 1) this._r = Math.round(this._r);
+    if (this._g < 1) this._g = Math.round(this._g);
+    if (this._b < 1) this._b = Math.round(this._b);
     this._ok = rgb.ok;
-    this._tc_id = tinyCounter++;
-}
-
-tinycolor.prototype = {
-    isDark: function() {
-        return this.getBrightness() < 128;
+  }
+  tinycolor.prototype = {
+    isDark: function isDark() {
+      return this.getBrightness() < 128;
     },
-    isLight: function() {
-        return !this.isDark();
+    isLight: function isLight() {
+      return !this.isDark();
     },
-    isValid: function() {
-        return this._ok;
+    isValid: function isValid() {
+      return this._ok;
     },
-    getOriginalInput: function() {
+    getOriginalInput: function getOriginalInput() {
       return this._originalInput;
     },
-    getFormat: function() {
-        return this._format;
+    getFormat: function getFormat() {
+      return this._format;
     },
-    getAlpha: function() {
-        return this._a;
+    getAlpha: function getAlpha() {
+      return this._a;
     },
-    getBrightness: function() {
-        //http://www.w3.org/TR/AERT#color-contrast
-        var rgb = this.toRgb();
-        return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+    getBrightness: function getBrightness() {
+      //http://www.w3.org/TR/AERT#color-contrast
+      var rgb = this.toRgb();
+      return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
     },
-    getLuminance: function() {
-        //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
-        var rgb = this.toRgb();
-        var RsRGB, GsRGB, BsRGB, R, G, B;
-        RsRGB = rgb.r/255;
-        GsRGB = rgb.g/255;
-        BsRGB = rgb.b/255;
-
-        if (RsRGB <= 0.03928) {R = RsRGB / 12.92;} else {R = Math.pow(((RsRGB + 0.055) / 1.055), 2.4);}
-        if (GsRGB <= 0.03928) {G = GsRGB / 12.92;} else {G = Math.pow(((GsRGB + 0.055) / 1.055), 2.4);}
-        if (BsRGB <= 0.03928) {B = BsRGB / 12.92;} else {B = Math.pow(((BsRGB + 0.055) / 1.055), 2.4);}
-        return (0.2126 * R) + (0.7152 * G) + (0.0722 * B);
+    getLuminance: function getLuminance() {
+      //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+      var rgb = this.toRgb();
+      var RsRGB, GsRGB, BsRGB, R, G, B;
+      RsRGB = rgb.r / 255;
+      GsRGB = rgb.g / 255;
+      BsRGB = rgb.b / 255;
+      if (RsRGB <= 0.03928) R = RsRGB / 12.92;else R = Math.pow((RsRGB + 0.055) / 1.055, 2.4);
+      if (GsRGB <= 0.03928) G = GsRGB / 12.92;else G = Math.pow((GsRGB + 0.055) / 1.055, 2.4);
+      if (BsRGB <= 0.03928) B = BsRGB / 12.92;else B = Math.pow((BsRGB + 0.055) / 1.055, 2.4);
+      return 0.2126 * R + 0.7152 * G + 0.0722 * B;
     },
-    setAlpha: function(value) {
-        this._a = boundAlpha(value);
-        this._roundA = mathRound(100*this._a) / 100;
-        return this;
+    setAlpha: function setAlpha(value) {
+      this._a = boundAlpha(value);
+      this._roundA = Math.round(100 * this._a) / 100;
+      return this;
     },
-    toHsv: function() {
-        var hsv = rgbToHsv(this._r, this._g, this._b);
-        return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: this._a };
+    toHsv: function toHsv() {
+      var hsv = rgbToHsv(this._r, this._g, this._b);
+      return {
+        h: hsv.h * 360,
+        s: hsv.s,
+        v: hsv.v,
+        a: this._a
+      };
     },
-    toHsvString: function() {
-        var hsv = rgbToHsv(this._r, this._g, this._b);
-        var h = mathRound(hsv.h * 360), s = mathRound(hsv.s * 100), v = mathRound(hsv.v * 100);
-        return (this._a == 1) ?
-          "hsv("  + h + ", " + s + "%, " + v + "%)" :
-          "hsva(" + h + ", " + s + "%, " + v + "%, "+ this._roundA + ")";
+    toHsvString: function toHsvString() {
+      var hsv = rgbToHsv(this._r, this._g, this._b);
+      var h = Math.round(hsv.h * 360),
+        s = Math.round(hsv.s * 100),
+        v = Math.round(hsv.v * 100);
+      return this._a == 1 ? "hsv(" + h + ", " + s + "%, " + v + "%)" : "hsva(" + h + ", " + s + "%, " + v + "%, " + this._roundA + ")";
     },
-    toHsl: function() {
-        var hsl = rgbToHsl(this._r, this._g, this._b);
-        return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: this._a };
+    toHsl: function toHsl() {
+      var hsl = rgbToHsl(this._r, this._g, this._b);
+      return {
+        h: hsl.h * 360,
+        s: hsl.s,
+        l: hsl.l,
+        a: this._a
+      };
     },
-    toHslString: function() {
-        var hsl = rgbToHsl(this._r, this._g, this._b);
-        var h = mathRound(hsl.h * 360), s = mathRound(hsl.s * 100), l = mathRound(hsl.l * 100);
-        return (this._a == 1) ?
-          "hsl("  + h + ", " + s + "%, " + l + "%)" :
-          "hsla(" + h + ", " + s + "%, " + l + "%, "+ this._roundA + ")";
+    toHslString: function toHslString() {
+      var hsl = rgbToHsl(this._r, this._g, this._b);
+      var h = Math.round(hsl.h * 360),
+        s = Math.round(hsl.s * 100),
+        l = Math.round(hsl.l * 100);
+      return this._a == 1 ? "hsl(" + h + ", " + s + "%, " + l + "%)" : "hsla(" + h + ", " + s + "%, " + l + "%, " + this._roundA + ")";
     },
-    toHex: function(allow3Char) {
-        return rgbToHex(this._r, this._g, this._b, allow3Char);
+    toHex: function toHex(allow3Char) {
+      return rgbToHex(this._r, this._g, this._b, allow3Char);
     },
-    toHexString: function(allow3Char) {
-        return '#' + this.toHex(allow3Char);
+    toHexString: function toHexString(allow3Char) {
+      return "#" + this.toHex(allow3Char);
     },
-    toHex8: function(allow4Char) {
-        return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
+    toHex8: function toHex8(allow4Char) {
+      return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
     },
-    toHex8String: function(allow4Char) {
-        return '#' + this.toHex8(allow4Char);
+    toHex8String: function toHex8String(allow4Char) {
+      return "#" + this.toHex8(allow4Char);
     },
-    toRgb: function() {
-        return { r: mathRound(this._r), g: mathRound(this._g), b: mathRound(this._b), a: this._a };
+    toRgb: function toRgb() {
+      return {
+        r: Math.round(this._r),
+        g: Math.round(this._g),
+        b: Math.round(this._b),
+        a: this._a
+      };
     },
-    toRgbString: function() {
-        return (this._a == 1) ?
-          "rgb("  + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ")" :
-          "rgba(" + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ", " + this._roundA + ")";
+    toRgbString: function toRgbString() {
+      return this._a == 1 ? "rgb(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ")" : "rgba(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ", " + this._roundA + ")";
     },
-    toPercentageRgb: function() {
-        return { r: mathRound(bound01(this._r, 255) * 100) + "%", g: mathRound(bound01(this._g, 255) * 100) + "%", b: mathRound(bound01(this._b, 255) * 100) + "%", a: this._a };
+    toPercentageRgb: function toPercentageRgb() {
+      return {
+        r: Math.round(bound01(this._r, 255) * 100) + "%",
+        g: Math.round(bound01(this._g, 255) * 100) + "%",
+        b: Math.round(bound01(this._b, 255) * 100) + "%",
+        a: this._a
+      };
     },
-    toPercentageRgbString: function() {
-        return (this._a == 1) ?
-          "rgb("  + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%)" :
-          "rgba(" + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
+    toPercentageRgbString: function toPercentageRgbString() {
+      return this._a == 1 ? "rgb(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%)" : "rgba(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
     },
-    toName: function() {
-        if (this._a === 0) {
-            return "transparent";
+    toName: function toName() {
+      if (this._a === 0) {
+        return "transparent";
+      }
+      if (this._a < 1) {
+        return false;
+      }
+      return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
+    },
+    toFilter: function toFilter(secondColor) {
+      var hex8String = "#" + rgbaToArgbHex(this._r, this._g, this._b, this._a);
+      var secondHex8String = hex8String;
+      var gradientType = this._gradientType ? "GradientType = 1, " : "";
+      if (secondColor) {
+        var s = tinycolor(secondColor);
+        secondHex8String = "#" + rgbaToArgbHex(s._r, s._g, s._b, s._a);
+      }
+      return "progid:DXImageTransform.Microsoft.gradient(" + gradientType + "startColorstr=" + hex8String + ",endColorstr=" + secondHex8String + ")";
+    },
+    toString: function toString(format) {
+      var formatSet = !!format;
+      format = format || this._format;
+      var formattedString = false;
+      var hasAlpha = this._a < 1 && this._a >= 0;
+      var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
+      if (needsAlphaFormat) {
+        // Special case for "transparent", all other non-alpha formats
+        // will return rgba when there is transparency.
+        if (format === "name" && this._a === 0) {
+          return this.toName();
         }
-
-        if (this._a < 1) {
-            return false;
-        }
-
-        return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
+        return this.toRgbString();
+      }
+      if (format === "rgb") {
+        formattedString = this.toRgbString();
+      }
+      if (format === "prgb") {
+        formattedString = this.toPercentageRgbString();
+      }
+      if (format === "hex" || format === "hex6") {
+        formattedString = this.toHexString();
+      }
+      if (format === "hex3") {
+        formattedString = this.toHexString(true);
+      }
+      if (format === "hex4") {
+        formattedString = this.toHex8String(true);
+      }
+      if (format === "hex8") {
+        formattedString = this.toHex8String();
+      }
+      if (format === "name") {
+        formattedString = this.toName();
+      }
+      if (format === "hsl") {
+        formattedString = this.toHslString();
+      }
+      if (format === "hsv") {
+        formattedString = this.toHsvString();
+      }
+      return formattedString || this.toHexString();
     },
-    toFilter: function(secondColor) {
-        var hex8String = '#' + rgbaToArgbHex(this._r, this._g, this._b, this._a);
-        var secondHex8String = hex8String;
-        var gradientType = this._gradientType ? "GradientType = 1, " : "";
-
-        if (secondColor) {
-            var s = tinycolor(secondColor);
-            secondHex8String = '#' + rgbaToArgbHex(s._r, s._g, s._b, s._a);
-        }
-
-        return "progid:DXImageTransform.Microsoft.gradient("+gradientType+"startColorstr="+hex8String+",endColorstr="+secondHex8String+")";
+    clone: function clone() {
+      return tinycolor(this.toString());
     },
-    toString: function(format) {
-        var formatSet = !!format;
-        format = format || this._format;
-
-        var formattedString = false;
-        var hasAlpha = this._a < 1 && this._a >= 0;
-        var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
-
-        if (needsAlphaFormat) {
-            // Special case for "transparent", all other non-alpha formats
-            // will return rgba when there is transparency.
-            if (format === "name" && this._a === 0) {
-                return this.toName();
-            }
-            return this.toRgbString();
-        }
-        if (format === "rgb") {
-            formattedString = this.toRgbString();
-        }
-        if (format === "prgb") {
-            formattedString = this.toPercentageRgbString();
-        }
-        if (format === "hex" || format === "hex6") {
-            formattedString = this.toHexString();
-        }
-        if (format === "hex3") {
-            formattedString = this.toHexString(true);
-        }
-        if (format === "hex4") {
-            formattedString = this.toHex8String(true);
-        }
-        if (format === "hex8") {
-            formattedString = this.toHex8String();
-        }
-        if (format === "name") {
-            formattedString = this.toName();
-        }
-        if (format === "hsl") {
-            formattedString = this.toHslString();
-        }
-        if (format === "hsv") {
-            formattedString = this.toHsvString();
-        }
-
-        return formattedString || this.toHexString();
+    _applyModification: function _applyModification(fn, args) {
+      var color = fn.apply(null, [this].concat([].slice.call(args)));
+      this._r = color._r;
+      this._g = color._g;
+      this._b = color._b;
+      this.setAlpha(color._a);
+      return this;
     },
-    clone: function() {
-        return tinycolor(this.toString());
+    lighten: function lighten() {
+      return this._applyModification(_lighten, arguments);
     },
-
-    _applyModification: function(fn, args) {
-        var color = fn.apply(null, [this].concat([].slice.call(args)));
-        this._r = color._r;
-        this._g = color._g;
-        this._b = color._b;
-        this.setAlpha(color._a);
-        return this;
+    brighten: function brighten() {
+      return this._applyModification(_brighten, arguments);
     },
-    lighten: function() {
-        return this._applyModification(lighten, arguments);
+    darken: function darken() {
+      return this._applyModification(_darken, arguments);
     },
-    brighten: function() {
-        return this._applyModification(brighten, arguments);
+    desaturate: function desaturate() {
+      return this._applyModification(_desaturate, arguments);
     },
-    darken: function() {
-        return this._applyModification(darken, arguments);
+    saturate: function saturate() {
+      return this._applyModification(_saturate, arguments);
     },
-    desaturate: function() {
-        return this._applyModification(desaturate, arguments);
+    greyscale: function greyscale() {
+      return this._applyModification(_greyscale, arguments);
     },
-    saturate: function() {
-        return this._applyModification(saturate, arguments);
+    spin: function spin() {
+      return this._applyModification(_spin, arguments);
     },
-    greyscale: function() {
-        return this._applyModification(greyscale, arguments);
+    _applyCombination: function _applyCombination(fn, args) {
+      return fn.apply(null, [this].concat([].slice.call(args)));
     },
-    spin: function() {
-        return this._applyModification(spin, arguments);
+    analogous: function analogous() {
+      return this._applyCombination(_analogous, arguments);
     },
-
-    _applyCombination: function(fn, args) {
-        return fn.apply(null, [this].concat([].slice.call(args)));
+    complement: function complement() {
+      return this._applyCombination(_complement, arguments);
     },
-    analogous: function() {
-        return this._applyCombination(analogous, arguments);
+    monochromatic: function monochromatic() {
+      return this._applyCombination(_monochromatic, arguments);
     },
-    complement: function() {
-        return this._applyCombination(complement, arguments);
+    splitcomplement: function splitcomplement() {
+      return this._applyCombination(_splitcomplement, arguments);
     },
-    monochromatic: function() {
-        return this._applyCombination(monochromatic, arguments);
+    // Disabled until https://github.com/bgrins/TinyColor/issues/254
+    // polyad: function (number) {
+    //   return this._applyCombination(polyad, [number]);
+    // },
+    triad: function triad() {
+      return this._applyCombination(polyad, [3]);
     },
-    splitcomplement: function() {
-        return this._applyCombination(splitcomplement, arguments);
-    },
-    triad: function() {
-        return this._applyCombination(triad, arguments);
-    },
-    tetrad: function() {
-        return this._applyCombination(tetrad, arguments);
+    tetrad: function tetrad() {
+      return this._applyCombination(polyad, [4]);
     }
-};
+  };
 
-// If input is an object, force 1 into "1.0" to handle ratios properly
-// String input requires "1.0" as input, so 1 will be treated as 1
-tinycolor.fromRatio = function(color, opts) {
-    if (typeof color == "object") {
-        var newColor = {};
-        for (var i in color) {
-            if (color.hasOwnProperty(i)) {
-                if (i === "a") {
-                    newColor[i] = color[i];
-                }
-                else {
-                    newColor[i] = convertToPercentage(color[i]);
-                }
-            }
+  // If input is an object, force 1 into "1.0" to handle ratios properly
+  // String input requires "1.0" as input, so 1 will be treated as 1
+  tinycolor.fromRatio = function (color, opts) {
+    if (_typeof(color) == "object") {
+      var newColor = {};
+      for (var i in color) {
+        if (color.hasOwnProperty(i)) {
+          if (i === "a") {
+            newColor[i] = color[i];
+          } else {
+            newColor[i] = convertToPercentage(color[i]);
+          }
         }
-        color = newColor;
+      }
+      color = newColor;
     }
-
     return tinycolor(color, opts);
-};
+  };
 
-// Given a string or object, convert that input to RGB
-// Possible string inputs:
-//
-//     "red"
-//     "#f00" or "f00"
-//     "#ff0000" or "ff0000"
-//     "#ff000000" or "ff000000"
-//     "rgb 255 0 0" or "rgb (255, 0, 0)"
-//     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
-//     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
-//     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
-//     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
-//     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
-//     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
-//
-function inputToRGB(color) {
-
-    var rgb = { r: 0, g: 0, b: 0 };
+  // Given a string or object, convert that input to RGB
+  // Possible string inputs:
+  //
+  //     "red"
+  //     "#f00" or "f00"
+  //     "#ff0000" or "ff0000"
+  //     "#ff000000" or "ff000000"
+  //     "rgb 255 0 0" or "rgb (255, 0, 0)"
+  //     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
+  //     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
+  //     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
+  //     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
+  //     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
+  //     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
+  //
+  function inputToRGB(color) {
+    var rgb = {
+      r: 0,
+      g: 0,
+      b: 0
+    };
     var a = 1;
     var s = null;
     var v = null;
     var l = null;
     var ok = false;
     var format = false;
-
     if (typeof color == "string") {
-        color = stringInputToObject(color);
+      color = stringInputToObject(color);
     }
-
-    if (typeof color == "object") {
-        if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
-            rgb = rgbToRgb(color.r, color.g, color.b);
-            ok = true;
-            format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
-            s = convertToPercentage(color.s);
-            v = convertToPercentage(color.v);
-            rgb = hsvToRgb(color.h, s, v);
-            ok = true;
-            format = "hsv";
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
-            s = convertToPercentage(color.s);
-            l = convertToPercentage(color.l);
-            rgb = hslToRgb(color.h, s, l);
-            ok = true;
-            format = "hsl";
-        }
-
-        if (color.hasOwnProperty("a")) {
-            a = color.a;
-        }
+    if (_typeof(color) == "object") {
+      if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
+        rgb = rgbToRgb(color.r, color.g, color.b);
+        ok = true;
+        format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
+      } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
+        s = convertToPercentage(color.s);
+        v = convertToPercentage(color.v);
+        rgb = hsvToRgb(color.h, s, v);
+        ok = true;
+        format = "hsv";
+      } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
+        s = convertToPercentage(color.s);
+        l = convertToPercentage(color.l);
+        rgb = hslToRgb(color.h, s, l);
+        ok = true;
+        format = "hsl";
+      }
+      if (color.hasOwnProperty("a")) {
+        a = color.a;
+      }
     }
-
     a = boundAlpha(a);
-
     return {
-        ok: ok,
-        format: color.format || format,
-        r: mathMin(255, mathMax(rgb.r, 0)),
-        g: mathMin(255, mathMax(rgb.g, 0)),
-        b: mathMin(255, mathMax(rgb.b, 0)),
-        a: a
+      ok: ok,
+      format: color.format || format,
+      r: Math.min(255, Math.max(rgb.r, 0)),
+      g: Math.min(255, Math.max(rgb.g, 0)),
+      b: Math.min(255, Math.max(rgb.b, 0)),
+      a: a
     };
-}
+  }
 
+  // Conversion Functions
+  // --------------------
 
-// Conversion Functions
-// --------------------
+  // `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
+  // <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
 
-// `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
-// <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
-
-// `rgbToRgb`
-// Handle bounds / percentage checking to conform to CSS color spec
-// <http://www.w3.org/TR/css3-color/>
-// *Assumes:* r, g, b in [0, 255] or [0, 1]
-// *Returns:* { r, g, b } in [0, 255]
-function rgbToRgb(r, g, b){
+  // `rgbToRgb`
+  // Handle bounds / percentage checking to conform to CSS color spec
+  // <http://www.w3.org/TR/css3-color/>
+  // *Assumes:* r, g, b in [0, 255] or [0, 1]
+  // *Returns:* { r, g, b } in [0, 255]
+  function rgbToRgb(r, g, b) {
     return {
-        r: bound01(r, 255) * 255,
-        g: bound01(g, 255) * 255,
-        b: bound01(b, 255) * 255
+      r: bound01(r, 255) * 255,
+      g: bound01(g, 255) * 255,
+      b: bound01(b, 255) * 255
     };
-}
+  }
 
-// `rgbToHsl`
-// Converts an RGB color value to HSL.
-// *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
-// *Returns:* { h, s, l } in [0,1]
-function rgbToHsl(r, g, b) {
-
+  // `rgbToHsl`
+  // Converts an RGB color value to HSL.
+  // *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
+  // *Returns:* { h, s, l } in [0,1]
+  function rgbToHsl(r, g, b) {
     r = bound01(r, 255);
     g = bound01(g, 255);
     b = bound01(b, 255);
-
-    var max = mathMax(r, g, b), min = mathMin(r, g, b);
-    var h, s, l = (max + min) / 2;
-
-    if(max == min) {
-        h = s = 0; // achromatic
+    var max = Math.max(r, g, b),
+      min = Math.min(r, g, b);
+    var h,
+      s,
+      l = (max + min) / 2;
+    if (max == min) {
+      h = s = 0; // achromatic
+    } else {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r:
+          h = (g - b) / d + (g < b ? 6 : 0);
+          break;
+        case g:
+          h = (b - r) / d + 2;
+          break;
+        case b:
+          h = (r - g) / d + 4;
+          break;
+      }
+      h /= 6;
     }
-    else {
-        var d = max - min;
-        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch(max) {
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
+    return {
+      h: h,
+      s: s,
+      l: l
+    };
+  }
 
-        h /= 6;
-    }
-
-    return { h: h, s: s, l: l };
-}
-
-// `hslToRgb`
-// Converts an HSL color value to RGB.
-// *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
-// *Returns:* { r, g, b } in the set [0, 255]
-function hslToRgb(h, s, l) {
+  // `hslToRgb`
+  // Converts an HSL color value to RGB.
+  // *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
+  // *Returns:* { r, g, b } in the set [0, 255]
+  function hslToRgb(h, s, l) {
     var r, g, b;
-
     h = bound01(h, 360);
     s = bound01(s, 100);
     l = bound01(l, 100);
-
     function hue2rgb(p, q, t) {
-        if(t < 0) t += 1;
-        if(t > 1) t -= 1;
-        if(t < 1/6) return p + (q - p) * 6 * t;
-        if(t < 1/2) return q;
-        if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-        return p;
+      if (t < 0) t += 1;
+      if (t > 1) t -= 1;
+      if (t < 1 / 6) return p + (q - p) * 6 * t;
+      if (t < 1 / 2) return q;
+      if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+      return p;
     }
-
-    if(s === 0) {
-        r = g = b = l; // achromatic
+    if (s === 0) {
+      r = g = b = l; // achromatic
+    } else {
+      var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      var p = 2 * l - q;
+      r = hue2rgb(p, q, h + 1 / 3);
+      g = hue2rgb(p, q, h);
+      b = hue2rgb(p, q, h - 1 / 3);
     }
-    else {
-        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-        var p = 2 * l - q;
-        r = hue2rgb(p, q, h + 1/3);
-        g = hue2rgb(p, q, h);
-        b = hue2rgb(p, q, h - 1/3);
-    }
+    return {
+      r: r * 255,
+      g: g * 255,
+      b: b * 255
+    };
+  }
 
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-
-// `rgbToHsv`
-// Converts an RGB color value to HSV
-// *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
-// *Returns:* { h, s, v } in [0,1]
-function rgbToHsv(r, g, b) {
-
+  // `rgbToHsv`
+  // Converts an RGB color value to HSV
+  // *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
+  // *Returns:* { h, s, v } in [0,1]
+  function rgbToHsv(r, g, b) {
     r = bound01(r, 255);
     g = bound01(g, 255);
     b = bound01(b, 255);
-
-    var max = mathMax(r, g, b), min = mathMin(r, g, b);
-    var h, s, v = max;
-
+    var max = Math.max(r, g, b),
+      min = Math.min(r, g, b);
+    var h,
+      s,
+      v = max;
     var d = max - min;
     s = max === 0 ? 0 : d / max;
-
-    if(max == min) {
-        h = 0; // achromatic
+    if (max == min) {
+      h = 0; // achromatic
+    } else {
+      switch (max) {
+        case r:
+          h = (g - b) / d + (g < b ? 6 : 0);
+          break;
+        case g:
+          h = (b - r) / d + 2;
+          break;
+        case b:
+          h = (r - g) / d + 4;
+          break;
+      }
+      h /= 6;
     }
-    else {
-        switch(max) {
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
-        h /= 6;
-    }
-    return { h: h, s: s, v: v };
-}
+    return {
+      h: h,
+      s: s,
+      v: v
+    };
+  }
 
-// `hsvToRgb`
-// Converts an HSV color value to RGB.
-// *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
-// *Returns:* { r, g, b } in the set [0, 255]
- function hsvToRgb(h, s, v) {
-
+  // `hsvToRgb`
+  // Converts an HSV color value to RGB.
+  // *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
+  // *Returns:* { r, g, b } in the set [0, 255]
+  function hsvToRgb(h, s, v) {
     h = bound01(h, 360) * 6;
     s = bound01(s, 100);
     v = bound01(v, 100);
-
     var i = Math.floor(h),
-        f = h - i,
-        p = v * (1 - s),
-        q = v * (1 - f * s),
-        t = v * (1 - (1 - f) * s),
-        mod = i % 6,
-        r = [v, q, p, p, t, v][mod],
-        g = [t, v, v, q, p, p][mod],
-        b = [p, p, t, v, v, q][mod];
+      f = h - i,
+      p = v * (1 - s),
+      q = v * (1 - f * s),
+      t = v * (1 - (1 - f) * s),
+      mod = i % 6,
+      r = [v, q, p, p, t, v][mod],
+      g = [t, v, v, q, p, p][mod],
+      b = [p, p, t, v, v, q][mod];
+    return {
+      r: r * 255,
+      g: g * 255,
+      b: b * 255
+    };
+  }
 
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-
-// `rgbToHex`
-// Converts an RGB color to hex
-// Assumes r, g, and b are contained in the set [0, 255]
-// Returns a 3 or 6 character hex
-function rgbToHex(r, g, b, allow3Char) {
-
-    var hex = [
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16))
-    ];
+  // `rgbToHex`
+  // Converts an RGB color to hex
+  // Assumes r, g, and b are contained in the set [0, 255]
+  // Returns a 3 or 6 character hex
+  function rgbToHex(r, g, b, allow3Char) {
+    var hex = [pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16))];
 
     // Return a 3 character hex if possible
     if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
+      return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
     }
-
     return hex.join("");
-}
+  }
 
-// `rgbaToHex`
-// Converts an RGBA color plus alpha transparency to hex
-// Assumes r, g, b are contained in the set [0, 255] and
-// a in [0, 1]. Returns a 4 or 8 character rgba hex
-function rgbaToHex(r, g, b, a, allow4Char) {
-
-    var hex = [
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16)),
-        pad2(convertDecimalToHex(a))
-    ];
+  // `rgbaToHex`
+  // Converts an RGBA color plus alpha transparency to hex
+  // Assumes r, g, b are contained in the set [0, 255] and
+  // a in [0, 1]. Returns a 4 or 8 character rgba hex
+  function rgbaToHex(r, g, b, a, allow4Char) {
+    var hex = [pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16)), pad2(convertDecimalToHex(a))];
 
     // Return a 4 character hex if possible
     if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
+      return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
     }
-
     return hex.join("");
-}
+  }
 
-// `rgbaToArgbHex`
-// Converts an RGBA color to an ARGB Hex8 string
-// Rarely used, but required for "toFilter()"
-function rgbaToArgbHex(r, g, b, a) {
-
-    var hex = [
-        pad2(convertDecimalToHex(a)),
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16))
-    ];
-
+  // `rgbaToArgbHex`
+  // Converts an RGBA color to an ARGB Hex8 string
+  // Rarely used, but required for "toFilter()"
+  function rgbaToArgbHex(r, g, b, a) {
+    var hex = [pad2(convertDecimalToHex(a)), pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16))];
     return hex.join("");
-}
+  }
 
-// `equals`
-// Can be called with any tinycolor input
-tinycolor.equals = function (color1, color2) {
-    if (!color1 || !color2) { return false; }
+  // `equals`
+  // Can be called with any tinycolor input
+  tinycolor.equals = function (color1, color2) {
+    if (!color1 || !color2) return false;
     return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
-};
-
-tinycolor.random = function() {
+  };
+  tinycolor.random = function () {
     return tinycolor.fromRatio({
-        r: mathRandom(),
-        g: mathRandom(),
-        b: mathRandom()
+      r: Math.random(),
+      g: Math.random(),
+      b: Math.random()
     });
-};
+  };
 
+  // Modification Functions
+  // ----------------------
+  // Thanks to less.js for some of the basics here
+  // <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
 
-// Modification Functions
-// ----------------------
-// Thanks to less.js for some of the basics here
-// <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
-
-function desaturate(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
+  function _desaturate(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
     var hsl = tinycolor(color).toHsl();
     hsl.s -= amount / 100;
     hsl.s = clamp01(hsl.s);
     return tinycolor(hsl);
-}
-
-function saturate(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
+  }
+  function _saturate(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
     var hsl = tinycolor(color).toHsl();
     hsl.s += amount / 100;
     hsl.s = clamp01(hsl.s);
     return tinycolor(hsl);
-}
-
-function greyscale(color) {
+  }
+  function _greyscale(color) {
     return tinycolor(color).desaturate(100);
-}
-
-function lighten (color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
+  }
+  function _lighten(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
     var hsl = tinycolor(color).toHsl();
     hsl.l += amount / 100;
     hsl.l = clamp01(hsl.l);
     return tinycolor(hsl);
-}
-
-function brighten(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
+  }
+  function _brighten(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
     var rgb = tinycolor(color).toRgb();
-    rgb.r = mathMax(0, mathMin(255, rgb.r - mathRound(255 * - (amount / 100))));
-    rgb.g = mathMax(0, mathMin(255, rgb.g - mathRound(255 * - (amount / 100))));
-    rgb.b = mathMax(0, mathMin(255, rgb.b - mathRound(255 * - (amount / 100))));
+    rgb.r = Math.max(0, Math.min(255, rgb.r - Math.round(255 * -(amount / 100))));
+    rgb.g = Math.max(0, Math.min(255, rgb.g - Math.round(255 * -(amount / 100))));
+    rgb.b = Math.max(0, Math.min(255, rgb.b - Math.round(255 * -(amount / 100))));
     return tinycolor(rgb);
-}
-
-function darken (color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
+  }
+  function _darken(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
     var hsl = tinycolor(color).toHsl();
     hsl.l -= amount / 100;
     hsl.l = clamp01(hsl.l);
     return tinycolor(hsl);
-}
+  }
 
-// Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
-// Values outside of this range will be wrapped into this range.
-function spin(color, amount) {
+  // Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
+  // Values outside of this range will be wrapped into this range.
+  function _spin(color, amount) {
     var hsl = tinycolor(color).toHsl();
     var hue = (hsl.h + amount) % 360;
     hsl.h = hue < 0 ? 360 + hue : hue;
     return tinycolor(hsl);
-}
+  }
 
-// Combination Functions
-// ---------------------
-// Thanks to jQuery xColor for some of the ideas behind these
-// <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
+  // Combination Functions
+  // ---------------------
+  // Thanks to jQuery xColor for some of the ideas behind these
+  // <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
 
-function complement(color) {
+  function _complement(color) {
     var hsl = tinycolor(color).toHsl();
     hsl.h = (hsl.h + 180) % 360;
     return tinycolor(hsl);
-}
-
-function triad(color) {
+  }
+  function polyad(color, number) {
+    if (isNaN(number) || number <= 0) {
+      throw new Error("Argument to polyad must be a positive number");
+    }
+    var hsl = tinycolor(color).toHsl();
+    var result = [tinycolor(color)];
+    var step = 360 / number;
+    for (var i = 1; i < number; i++) {
+      result.push(tinycolor({
+        h: (hsl.h + i * step) % 360,
+        s: hsl.s,
+        l: hsl.l
+      }));
+    }
+    return result;
+  }
+  function _splitcomplement(color) {
     var hsl = tinycolor(color).toHsl();
     var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 120) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 240) % 360, s: hsl.s, l: hsl.l })
-    ];
-}
-
-function tetrad(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 90) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 180) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 270) % 360, s: hsl.s, l: hsl.l })
-    ];
-}
-
-function splitcomplement(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 72) % 360, s: hsl.s, l: hsl.l}),
-        tinycolor({ h: (h + 216) % 360, s: hsl.s, l: hsl.l})
-    ];
-}
-
-function analogous(color, results, slices) {
+    return [tinycolor(color), tinycolor({
+      h: (h + 72) % 360,
+      s: hsl.s,
+      l: hsl.l
+    }), tinycolor({
+      h: (h + 216) % 360,
+      s: hsl.s,
+      l: hsl.l
+    })];
+  }
+  function _analogous(color, results, slices) {
     results = results || 6;
     slices = slices || 30;
-
     var hsl = tinycolor(color).toHsl();
     var part = 360 / slices;
     var ret = [tinycolor(color)];
-
-    for (hsl.h = ((hsl.h - (part * results >> 1)) + 720) % 360; --results; ) {
-        hsl.h = (hsl.h + part) % 360;
-        ret.push(tinycolor(hsl));
+    for (hsl.h = (hsl.h - (part * results >> 1) + 720) % 360; --results;) {
+      hsl.h = (hsl.h + part) % 360;
+      ret.push(tinycolor(hsl));
     }
     return ret;
-}
-
-function monochromatic(color, results) {
+  }
+  function _monochromatic(color, results) {
     results = results || 6;
     var hsv = tinycolor(color).toHsv();
-    var h = hsv.h, s = hsv.s, v = hsv.v;
+    var h = hsv.h,
+      s = hsv.s,
+      v = hsv.v;
     var ret = [];
     var modification = 1 / results;
-
     while (results--) {
-        ret.push(tinycolor({ h: h, s: s, v: v}));
-        v = (v + modification) % 1;
+      ret.push(tinycolor({
+        h: h,
+        s: s,
+        v: v
+      }));
+      v = (v + modification) % 1;
     }
-
     return ret;
-}
+  }
 
-// Utility Functions
-// ---------------------
+  // Utility Functions
+  // ---------------------
 
-tinycolor.mix = function(color1, color2, amount) {
-    amount = (amount === 0) ? 0 : (amount || 50);
-
+  tinycolor.mix = function (color1, color2, amount) {
+    amount = amount === 0 ? 0 : amount || 50;
     var rgb1 = tinycolor(color1).toRgb();
     var rgb2 = tinycolor(color2).toRgb();
-
     var p = amount / 100;
-
     var rgba = {
-        r: ((rgb2.r - rgb1.r) * p) + rgb1.r,
-        g: ((rgb2.g - rgb1.g) * p) + rgb1.g,
-        b: ((rgb2.b - rgb1.b) * p) + rgb1.b,
-        a: ((rgb2.a - rgb1.a) * p) + rgb1.a
+      r: (rgb2.r - rgb1.r) * p + rgb1.r,
+      g: (rgb2.g - rgb1.g) * p + rgb1.g,
+      b: (rgb2.b - rgb1.b) * p + rgb1.b,
+      a: (rgb2.a - rgb1.a) * p + rgb1.a
     };
-
     return tinycolor(rgba);
-};
+  };
 
+  // Readability Functions
+  // ---------------------
+  // <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
 
-// Readability Functions
-// ---------------------
-// <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
-
-// `contrast`
-// Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
-tinycolor.readability = function(color1, color2) {
+  // `contrast`
+  // Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
+  tinycolor.readability = function (color1, color2) {
     var c1 = tinycolor(color1);
     var c2 = tinycolor(color2);
-    return (Math.max(c1.getLuminance(),c2.getLuminance())+0.05) / (Math.min(c1.getLuminance(),c2.getLuminance())+0.05);
-};
+    return (Math.max(c1.getLuminance(), c2.getLuminance()) + 0.05) / (Math.min(c1.getLuminance(), c2.getLuminance()) + 0.05);
+  };
 
-// `isReadable`
-// Ensure that foreground and background color combinations meet WCAG2 guidelines.
-// The third argument is an optional Object.
-//      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
-//      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
-// If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
+  // `isReadable`
+  // Ensure that foreground and background color combinations meet WCAG2 guidelines.
+  // The third argument is an optional Object.
+  //      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
+  //      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
+  // If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
 
-// *Example*
-//    tinycolor.isReadable("#000", "#111") => false
-//    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
-tinycolor.isReadable = function(color1, color2, wcag2) {
+  // *Example*
+  //    tinycolor.isReadable("#000", "#111") => false
+  //    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
+  tinycolor.isReadable = function (color1, color2, wcag2) {
     var readability = tinycolor.readability(color1, color2);
     var wcag2Parms, out;
-
     out = false;
-
     wcag2Parms = validateWCAG2Parms(wcag2);
     switch (wcag2Parms.level + wcag2Parms.size) {
-        case "AAsmall":
-        case "AAAlarge":
-            out = readability >= 4.5;
-            break;
-        case "AAlarge":
-            out = readability >= 3;
-            break;
-        case "AAAsmall":
-            out = readability >= 7;
-            break;
+      case "AAsmall":
+      case "AAAlarge":
+        out = readability >= 4.5;
+        break;
+      case "AAlarge":
+        out = readability >= 3;
+        break;
+      case "AAAsmall":
+        out = readability >= 7;
+        break;
     }
     return out;
+  };
 
-};
-
-// `mostReadable`
-// Given a base color and a list of possible foreground or background
-// colors for that base, returns the most readable color.
-// Optionally returns Black or White if the most readable color is unreadable.
-// *Example*
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
-//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
-//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
-tinycolor.mostReadable = function(baseColor, colorList, args) {
+  // `mostReadable`
+  // Given a base color and a list of possible foreground or background
+  // colors for that base, returns the most readable color.
+  // Optionally returns Black or White if the most readable color is unreadable.
+  // *Example*
+  //    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
+  //    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
+  //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
+  //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
+  tinycolor.mostReadable = function (baseColor, colorList, args) {
     var bestColor = null;
     var bestScore = 0;
     var readability;
-    var includeFallbackColors, level, size ;
+    var includeFallbackColors, level, size;
     args = args || {};
-    includeFallbackColors = args.includeFallbackColors ;
+    includeFallbackColors = args.includeFallbackColors;
     level = args.level;
     size = args.size;
-
-    for (var i= 0; i < colorList.length ; i++) {
-        readability = tinycolor.readability(baseColor, colorList[i]);
-        if (readability > bestScore) {
-            bestScore = readability;
-            bestColor = tinycolor(colorList[i]);
-        }
+    for (var i = 0; i < colorList.length; i++) {
+      readability = tinycolor.readability(baseColor, colorList[i]);
+      if (readability > bestScore) {
+        bestScore = readability;
+        bestColor = tinycolor(colorList[i]);
+      }
     }
-
-    if (tinycolor.isReadable(baseColor, bestColor, {"level":level,"size":size}) || !includeFallbackColors) {
-        return bestColor;
+    if (tinycolor.isReadable(baseColor, bestColor, {
+      level: level,
+      size: size
+    }) || !includeFallbackColors) {
+      return bestColor;
+    } else {
+      args.includeFallbackColors = false;
+      return tinycolor.mostReadable(baseColor, ["#fff", "#000"], args);
     }
-    else {
-        args.includeFallbackColors=false;
-        return tinycolor.mostReadable(baseColor,["#fff", "#000"],args);
-    }
-};
+  };
 
-
-// Big List of Colors
-// ------------------
-// <http://www.w3.org/TR/css3-color/#svg-color>
-var names = tinycolor.names = {
+  // Big List of Colors
+  // ------------------
+  // <https://www.w3.org/TR/css-color-4/#named-colors>
+  var names = tinycolor.names = {
     aliceblue: "f0f8ff",
     antiquewhite: "faebd7",
     aqua: "0ff",
@@ -91118,104 +91152,97 @@ var names = tinycolor.names = {
     whitesmoke: "f5f5f5",
     yellow: "ff0",
     yellowgreen: "9acd32"
-};
+  };
 
-// Make it easy to access colors via `hexNames[hex]`
-var hexNames = tinycolor.hexNames = flip(names);
+  // Make it easy to access colors via `hexNames[hex]`
+  var hexNames = tinycolor.hexNames = flip(names);
 
+  // Utilities
+  // ---------
 
-// Utilities
-// ---------
-
-// `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
-function flip(o) {
-    var flipped = { };
+  // `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
+  function flip(o) {
+    var flipped = {};
     for (var i in o) {
-        if (o.hasOwnProperty(i)) {
-            flipped[o[i]] = i;
-        }
+      if (o.hasOwnProperty(i)) {
+        flipped[o[i]] = i;
+      }
     }
     return flipped;
-}
+  }
 
-// Return a valid alpha value [0,1] with all invalid values being set to 1
-function boundAlpha(a) {
+  // Return a valid alpha value [0,1] with all invalid values being set to 1
+  function boundAlpha(a) {
     a = parseFloat(a);
-
     if (isNaN(a) || a < 0 || a > 1) {
-        a = 1;
+      a = 1;
     }
-
     return a;
-}
+  }
 
-// Take input from [0, n] and return it as [0, 1]
-function bound01(n, max) {
-    if (isOnePointZero(n)) { n = "100%"; }
-
+  // Take input from [0, n] and return it as [0, 1]
+  function bound01(n, max) {
+    if (isOnePointZero(n)) n = "100%";
     var processPercent = isPercentage(n);
-    n = mathMin(max, mathMax(0, parseFloat(n)));
+    n = Math.min(max, Math.max(0, parseFloat(n)));
 
     // Automatically convert percentage into number
     if (processPercent) {
-        n = parseInt(n * max, 10) / 100;
+      n = parseInt(n * max, 10) / 100;
     }
 
     // Handle floating point rounding errors
-    if ((Math.abs(n - max) < 0.000001)) {
-        return 1;
+    if (Math.abs(n - max) < 0.000001) {
+      return 1;
     }
 
     // Convert into [0, 1] range if it isn't already
-    return (n % max) / parseFloat(max);
-}
+    return n % max / parseFloat(max);
+  }
 
-// Force a number between 0 and 1
-function clamp01(val) {
-    return mathMin(1, mathMax(0, val));
-}
+  // Force a number between 0 and 1
+  function clamp01(val) {
+    return Math.min(1, Math.max(0, val));
+  }
 
-// Parse a base-16 hex value into a base-10 integer
-function parseIntFromHex(val) {
+  // Parse a base-16 hex value into a base-10 integer
+  function parseIntFromHex(val) {
     return parseInt(val, 16);
-}
+  }
 
-// Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
-// <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
-function isOnePointZero(n) {
-    return typeof n == "string" && n.indexOf('.') != -1 && parseFloat(n) === 1;
-}
+  // Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
+  // <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
+  function isOnePointZero(n) {
+    return typeof n == "string" && n.indexOf(".") != -1 && parseFloat(n) === 1;
+  }
 
-// Check to see if string passed in is a percentage
-function isPercentage(n) {
-    return typeof n === "string" && n.indexOf('%') != -1;
-}
+  // Check to see if string passed in is a percentage
+  function isPercentage(n) {
+    return typeof n === "string" && n.indexOf("%") != -1;
+  }
 
-// Force a hex value to have 2 characters
-function pad2(c) {
-    return c.length == 1 ? '0' + c : '' + c;
-}
+  // Force a hex value to have 2 characters
+  function pad2(c) {
+    return c.length == 1 ? "0" + c : "" + c;
+  }
 
-// Replace a decimal with it's percentage value
-function convertToPercentage(n) {
+  // Replace a decimal with it's percentage value
+  function convertToPercentage(n) {
     if (n <= 1) {
-        n = (n * 100) + "%";
+      n = n * 100 + "%";
     }
-
     return n;
-}
+  }
 
-// Converts a decimal to a hex value
-function convertDecimalToHex(d) {
+  // Converts a decimal to a hex value
+  function convertDecimalToHex(d) {
     return Math.round(parseFloat(d) * 255).toString(16);
-}
-// Converts a hex value to a decimal
-function convertHexToDecimal(h) {
-    return (parseIntFromHex(h) / 255);
-}
-
-var matchers = (function() {
-
+  }
+  // Converts a hex value to a decimal
+  function convertHexToDecimal(h) {
+    return parseIntFromHex(h) / 255;
+  }
+  var matchers = function () {
     // <http://www.w3.org/TR/css3-values/#integers>
     var CSS_INTEGER = "[-\\+]?\\d+%?";
 
@@ -91230,42 +91257,45 @@ var matchers = (function() {
     // Whitespace can take the place of commas or opening paren
     var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
     var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-
     return {
-        CSS_UNIT: new RegExp(CSS_UNIT),
-        rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
-        rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
-        hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
-        hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
-        hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
-        hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
-        hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-        hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-        hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-        hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
+      CSS_UNIT: new RegExp(CSS_UNIT),
+      rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
+      rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
+      hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
+      hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
+      hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
+      hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
+      hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+      hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
+      hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+      hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
     };
-})();
+  }();
 
-// `isValidCSSUnit`
-// Take in a single string / number and check to see if it looks like a CSS unit
-// (see `matchers` above for definition).
-function isValidCSSUnit(color) {
+  // `isValidCSSUnit`
+  // Take in a single string / number and check to see if it looks like a CSS unit
+  // (see `matchers` above for definition).
+  function isValidCSSUnit(color) {
     return !!matchers.CSS_UNIT.exec(color);
-}
+  }
 
-// `stringInputToObject`
-// Permissive string parsing.  Take in a number of formats, and output an object
-// based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
-function stringInputToObject(color) {
-
-    color = color.replace(trimLeft,'').replace(trimRight, '').toLowerCase();
+  // `stringInputToObject`
+  // Permissive string parsing.  Take in a number of formats, and output an object
+  // based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
+  function stringInputToObject(color) {
+    color = color.replace(trimLeft, "").replace(trimRight, "").toLowerCase();
     var named = false;
     if (names[color]) {
-        color = names[color];
-        named = true;
-    }
-    else if (color == 'transparent') {
-        return { r: 0, g: 0, b: 0, a: 0, format: "name" };
+      color = names[color];
+      named = true;
+    } else if (color == "transparent") {
+      return {
+        r: 0,
+        g: 0,
+        b: 0,
+        a: 0,
+        format: "name"
+      };
     }
 
     // Try to match string input using regular expressions.
@@ -91273,91 +91303,112 @@ function stringInputToObject(color) {
     // Just return an object and let the conversion functions handle that.
     // This way the result will be the same whether the tinycolor is initialized with string or object.
     var match;
-    if ((match = matchers.rgb.exec(color))) {
-        return { r: match[1], g: match[2], b: match[3] };
+    if (match = matchers.rgb.exec(color)) {
+      return {
+        r: match[1],
+        g: match[2],
+        b: match[3]
+      };
     }
-    if ((match = matchers.rgba.exec(color))) {
-        return { r: match[1], g: match[2], b: match[3], a: match[4] };
+    if (match = matchers.rgba.exec(color)) {
+      return {
+        r: match[1],
+        g: match[2],
+        b: match[3],
+        a: match[4]
+      };
     }
-    if ((match = matchers.hsl.exec(color))) {
-        return { h: match[1], s: match[2], l: match[3] };
+    if (match = matchers.hsl.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        l: match[3]
+      };
     }
-    if ((match = matchers.hsla.exec(color))) {
-        return { h: match[1], s: match[2], l: match[3], a: match[4] };
+    if (match = matchers.hsla.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        l: match[3],
+        a: match[4]
+      };
     }
-    if ((match = matchers.hsv.exec(color))) {
-        return { h: match[1], s: match[2], v: match[3] };
+    if (match = matchers.hsv.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        v: match[3]
+      };
     }
-    if ((match = matchers.hsva.exec(color))) {
-        return { h: match[1], s: match[2], v: match[3], a: match[4] };
+    if (match = matchers.hsva.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        v: match[3],
+        a: match[4]
+      };
     }
-    if ((match = matchers.hex8.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            a: convertHexToDecimal(match[4]),
-            format: named ? "name" : "hex8"
-        };
+    if (match = matchers.hex8.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1]),
+        g: parseIntFromHex(match[2]),
+        b: parseIntFromHex(match[3]),
+        a: convertHexToDecimal(match[4]),
+        format: named ? "name" : "hex8"
+      };
     }
-    if ((match = matchers.hex6.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            format: named ? "name" : "hex"
-        };
+    if (match = matchers.hex6.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1]),
+        g: parseIntFromHex(match[2]),
+        b: parseIntFromHex(match[3]),
+        format: named ? "name" : "hex"
+      };
     }
-    if ((match = matchers.hex4.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1] + '' + match[1]),
-            g: parseIntFromHex(match[2] + '' + match[2]),
-            b: parseIntFromHex(match[3] + '' + match[3]),
-            a: convertHexToDecimal(match[4] + '' + match[4]),
-            format: named ? "name" : "hex8"
-        };
+    if (match = matchers.hex4.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1] + "" + match[1]),
+        g: parseIntFromHex(match[2] + "" + match[2]),
+        b: parseIntFromHex(match[3] + "" + match[3]),
+        a: convertHexToDecimal(match[4] + "" + match[4]),
+        format: named ? "name" : "hex8"
+      };
     }
-    if ((match = matchers.hex3.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1] + '' + match[1]),
-            g: parseIntFromHex(match[2] + '' + match[2]),
-            b: parseIntFromHex(match[3] + '' + match[3]),
-            format: named ? "name" : "hex"
-        };
+    if (match = matchers.hex3.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1] + "" + match[1]),
+        g: parseIntFromHex(match[2] + "" + match[2]),
+        b: parseIntFromHex(match[3] + "" + match[3]),
+        format: named ? "name" : "hex"
+      };
     }
-
     return false;
-}
-
-function validateWCAG2Parms(parms) {
+  }
+  function validateWCAG2Parms(parms) {
     // return valid WCAG2 parms for isReadable.
     // If input parms are invalid, return {"level":"AA", "size":"small"}
     var level, size;
-    parms = parms || {"level":"AA", "size":"small"};
+    parms = parms || {
+      level: "AA",
+      size: "small"
+    };
     level = (parms.level || "AA").toUpperCase();
     size = (parms.size || "small").toLowerCase();
     if (level !== "AA" && level !== "AAA") {
-        level = "AA";
+      level = "AA";
     }
     if (size !== "small" && size !== "large") {
-        size = "small";
+      size = "small";
     }
-    return {"level":level, "size":size};
-}
+    return {
+      level: level,
+      size: size
+    };
+  }
 
-// Node: Export function
-if ( true && module.exports) {
-    module.exports = tinycolor;
-}
-// AMD/requirejs: Define the module
-else if (true) {
-    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {return tinycolor;}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-}
-// Browser: Expose to window
-else {}
+  return tinycolor;
 
-})(Math);
+}));
 
 
 /***/ }),
