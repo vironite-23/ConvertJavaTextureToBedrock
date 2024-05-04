@@ -61352,7 +61352,7 @@ class RenameConverter extends _modifiedcommand_convert_base_api__WEBPACK_IMPORTE
             ["textures/entity/zombie_villager2/levels/gold.png", "textures/entity/zombie_villager2/levels/level_gold.png"],
             ["textures/entity/zombie_villager2/levels/iron.png", "textures/entity/zombie_villager2/levels/level_iron.png"],
             ["textures/entity/zombie_villager2/levels/stone.png", "textures/entity/zombie_villager2/levels/level_stone.png"],
-            ["textures/entity/zombie_villager2/professions/mason.png", "textures/entity/zombie_villager2/professions/stonemason.png"]
+            ["textures/entity/zombie_villager2/professions/mason.png", "textures/entity/zombie_villager2/professions/stonemason.png"],
 
             // Other Changes requested by umfy
             ["textures/block/dirt_path_side.png", "textures/blocks/grass_path_side.png"],
@@ -66664,10 +66664,10 @@ var SHARED = '__core-js_shared__';
 var store = module.exports = globalThis[SHARED] || defineGlobalProperty(SHARED, {});
 
 (store.versions || (store.versions = [])).push({
-  version: '3.36.1',
+  version: '3.37.0',
   mode: IS_PURE ? 'pure' : 'global',
   copyright: '© 2014-2024 Denis Pushkarev (zloirock.ru)',
-  license: 'https://github.com/zloirock/core-js/blob/v3.36.1/LICENSE',
+  license: 'https://github.com/zloirock/core-js/blob/v3.37.0/LICENSE',
   source: 'https://github.com/zloirock/core-js'
 });
 
