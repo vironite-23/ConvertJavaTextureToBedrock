@@ -58,7 +58,7 @@ Tested browsers:
 Internet Explorer or old Edge are not supported!
 
 ## Web app
-* The latest version is available through [GitHub pages](http://modifiedcommand.github.io/ConvertJavaTextureToBedrock/)
+* The latest version is available through [GitHub pages](http://vironite-23.github.io/ConvertJavaTextureToBedrockViro/)
 
 ## API
-* Look at [ModifiedCommand/ConvertJavaTextureToBedrockApi](https://github.com/ModifiedCommand/ConvertJavaTextureToBedrockApi)
+* Look at [vironite-23/ConvertJavaTextureToBedrockApi](https://github.com/vironite-23/ConvertJavaTextureToBedrockApiViro)
