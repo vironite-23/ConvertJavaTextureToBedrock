@@ -15,12 +15,12 @@
     "license": "GPL-3.0-only",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/vironite-23/ConvertJavaTextureToBedrockViro.git"
+        "url": "git+https://github.com/vironite-23/ConvertJavaTextureToBedrock.git"
     },
     "bugs": {
-        "url": "https://github.com/vironite-23/ConvertJavaTextureToBedrockViro/issues"
+        "url": "https://github.com/vironite-23/ConvertJavaTextureToBedrock/issues"
     },
-    "homepage": "https://github.com/vironite-23/ConvertJavaTextureToBedrockViro#readme",
+    "homepage": "https://github.com/vironite-23/ConvertJavaTextureToBedrock#readme",
     "devDependencies": {
         "@vironite-23/convert-minecraft-java-texture-to-bedrock-api": "4.1.11",
         "clean-webpack-plugin": "3.0.0",
