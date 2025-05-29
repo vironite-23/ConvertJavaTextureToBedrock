@@ -55472,7 +55472,7 @@ class ConvertJavaTextureToBedrockApi extends _modifiedcommand_convert_base_api__
 
         const output = await super.convert();
 
-        this.log.log("Please reopen Minecraft after selecting the converted texture pack, because in the current version it seems to be a bug to reload the texture cache (Otherwise it's possible that you will have a mix between your previous and new texture pack, which can lead to appearance bugs that would not occur)");
+        this.log.log("-Main-Please reopen Minecraft after selecting the converted texture pack, because in the current version it seems to be a bug to reload the texture cache (Otherwise it's possible that you will have a mix between your previous and new texture pack, which can lead to appearance bugs that would not occur)");
 
         return output;
     }
@@ -55627,7 +55627,9 @@ class AtlasConverter extends _modifiedcommand_convert_base_api__WEBPACK_IMPORTED
     static get DEFAULT_CONVERTER_DATA() {
         return [
             ["textures/items/clock_", 63, "textures/items/watch_atlas.png"],
-            ["textures/items/compass_", 31, "textures/items/compass_atlas.png"]
+            ["textures/items/compass_", 31, "textures/items/compass_atlas.png"],
+            ["textures/items/recovery_compass_", 31, "textures/items/recovery_compass_atlas.png"]
+
         ];
     }
 }
@@ -57727,6 +57729,10 @@ class CopyConverter extends _modifiedcommand_convert_base_api__WEBPACK_IMPORTED_
             // Wither
             ["textures/entity/creeper/creeper_armor.png", "textures/entity/wither_boss/wither_armor_blue.png"],
 
+            // Trial spawner
+            ["textures/blocks/trial_spawner_top_active.png", "textures/blocks/trial_spawner_top.png"],
+            ["textures/blocks/trial_spawner_top_ejecting_reward.png", "textures/blocks/trial_spawner_top_open.png"],
+
             ["bedrock_textures/", "textures/"]
         ];
     }
@@ -59666,7 +59672,21 @@ class OverlayToTranslateConverter extends _modifiedcommand_convert_base_api__WEB
             ["textures/entity/spider/spider.png", "textures/entity/spider_eyes.png", "textures/entity/spider/spider.png", true],
 
             // Wolf
-            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_tame.png", "textures/entity/wolf/wolf_tame.png", false, true]
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_tame.png", "textures/entity/wolf/wolf_tame.png", false, true],
+
+            // New Wolves
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_ashen_tame.png", "textures/entity/wolf/wolf_ashen_tame.png", false, true],
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_black_tame.png", "textures/entity/wolf/wolf_black_tame.png", false, true],
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_chestnut_tame.png", "textures/entity/wolf/wolf_chestnut_tame.png", false, true],
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_rusty_tame.png", "textures/entity/wolf/wolf_rusty_tame.png", false, true],
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_snowy_tame.png", "textures/entity/wolf/wolf_snowy_tame.png", false, true],
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_spotted_tame.png", "textures/entity/wolf/wolf_spotted_tame.png", false, true],
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_striped_tame.png", "textures/entity/wolf/wolf_striped_tame.png", false, true],
+            ["textures/entity/wolf/wolf_collar.png", "textures/entity/wolf/wolf_woods_tame.png", "textures/entity/wolf/wolf_woods_tame.png", false, true],
+
+            ["textures/entity/wolf/wolf_armor_overlay.png", "textures/entity/wolf/wolf_armor.png", "textures/entity/wolf/wolf_armor_dyed.png", true],
+            // ["textures/entity/equipment/wolf_body/armadillo_scute_overlay.png", "textures/entity/wolf/wolf_armor.png", "textures/entity/wolf/wolf_armor_dyed.png", true]
+
         ];
     }
 }
@@ -60013,7 +60033,13 @@ class PlaceholderConverter extends _modifiedcommand_convert_base_api__WEBPACK_IM
             // Zombie
             ["textures/entity/pig/pigzombie.png", 0, 0, 64, 32, 64, "textures/entity/pig/pigzombie.png", 2],
             ["textures/entity/zombie/husk.png", 0, 0, 64, 32, 64, "textures/entity/zombie/husk.png", 2],
-            ["textures/entity/zombie/zombie.png", 0, 0, 64, 32, 64, "textures/entity/zombie/zombie.png", 2]
+            ["textures/entity/zombie/zombie.png", 0, 0, 64, 32, 64, "textures/entity/zombie/zombie.png", 2],
+
+            // New Sign
+            ["textures/entity/cherry_sign.png", 2, 2, 24, 12, 64, "textures/ui/sign_cherry.png", 2],
+            ["textures/entity/bamboo_sign.png", 2, 2, 24, 12, 64, "textures/ui/sign_bamboo.png", 2],
+            ["textures/entity/mangrove_sign.png", 2, 2, 24, 12, 64, "textures/ui/sign_mangrove.png", 2],
+            ["textures/entity/pale_oak_sign.png", 2, 2, 24, 12, 64, "textures/ui/sign_pale_oak.png", 2]
         ];
     }
 }
@@ -60221,7 +60247,28 @@ class PngToTgaConverter extends _modifiedcommand_convert_base_api__WEBPACK_IMPOR
             ["textures/items/leather_horse_armor.png", "textures/items/leather_horse_armor.tga"],
             ["textures/items/leather_leggings.png", "textures/items/leather_leggings.tga"],
             ["textures/models/armor/leather_1.png", "textures/models/armor/leather_1.tga"],
-            ["textures/models/armor/leather_2.png", "textures/models/armor/leather_2.tga"]
+            ["textures/models/armor/leather_2.png", "textures/models/armor/leather_2.tga"],
+
+            // new added
+            ["textures/blocks/pale_oak_leaves.png", "textures/blocks/pale_oak_leaves.tga"],
+            ["textures/blocks/pale_oak_leaves.png", "textures/blocks/pale_oak_leaves_carried.tga"],
+            ["textures/blocks/azalea_leaves.png", "textures/blocks/azalea_leaves.tga"],
+            ["textures/blocks/azalea_leaves_flowers.png", "textures/blocks/azalea_leaves_flowers.tga"],
+            ["textures/blocks/azalea_leaves_flowers.png", "textures/blocks/azalea_leaves_flowers.tga"],
+            ["textures/blocks/cherry_leaves.png", "textures/blocks/cherry_leaves.tga"],
+
+            // wolves variant
+            ["textures/entity/wolf/wolf_ashen_tame.png", "textures/entity/wolf/wolf_ashen_tame.tga"],
+            ["textures/entity/wolf/wolf_black_tame.png", "textures/entity/wolf/wolf_black_tame.tga"],
+            ["textures/entity/wolf/wolf_chestnut_tame.png", "textures/entity/wolf/wolf_chestnut_tame.tga"],
+            ["textures/entity/wolf/wolf_rusty_tame.png", "textures/entity/wolf/wolf_rusty_tame.tga"],
+            ["textures/entity/wolf/wolf_snowy_tame.png", "textures/entity/wolf/wolf_snowy_tame.tga"],
+            ["textures/entity/wolf/wolf_spotted_tame.png", "textures/entity/wolf/wolf_spotted_tame.tga"],
+            ["textures/entity/wolf/wolf_striped_tame.png", "textures/entity/wolf/wolf_striped_tame.tga"],
+            ["textures/entity/wolf/wolf_woods_tame.png", "textures/entity/wolf/wolf_woods_tame.tga"],
+            
+            ["textures/entity/wolf/wolf_armor_dyed.png", "textures/entity/wolf/wolf_armor_dyed.tga"]
+
         ];
     }
 }
@@ -61355,12 +61402,359 @@ class RenameConverter extends _modifiedcommand_convert_base_api__WEBPACK_IMPORTE
             ["textures/entity/zombie_villager2/professions/mason.png", "textures/entity/zombie_villager2/professions/stonemason.png"],
 
             // Other Changes requested by umfy
-            ["textures/block/dirt_path_side.png", "textures/blocks/grass_path_side.png"],
-            ["textures/block/dirt_path_top.png", "textures/blocks/grass_path_top.png"],
-            ["textures/block/mangrove_log.png", "textures/blocks/mangrove_log_side.png"],
-            ["textures/block/stripped_mangrove_log.png", "textures/blocks/stripped_mangrove_log_side.png"],
-            ["textures/block/cherry_log.png", "textures/blocks/cherry_log_side.png"],
-            ["textures/block/stripped_cherry_log.png", "textures/blocks/stripped_cherry_log_side.png"],
+            ["textures/blocks/dirt_path_side.png", "textures/blocks/grass_path_side.png"],
+            ["textures/blocks/dirt_path_top.png", "textures/blocks/grass_path_top.png"],
+            ["textures/blocks/mangrove_log.png", "textures/blocks/mangrove_log_side.png"],
+            ["textures/blocks/stripped_mangrove_log.png", "textures/blocks/stripped_mangrove_log_side.png"],
+            ["textures/blocks/cherry_log.png", "textures/blocks/cherry_log_side.png"],
+            ["textures/blocks/stripped_cherry_log.png", "textures/blocks/stripped_cherry_log_side.png"],
+
+            //deepslate
+            ["textures/blocks/chiseled_deepslate.png", "textures/blocks/deepslate/chiseled_deepslate.png"],
+            ["textures/blocks/cobbled_deepslate.png", "textures/blocks/deepslate/cobbled_deepslate.png"],
+            ["textures/blocks/cracked_deepslate_bricks.png", "textures/blocks/deepslate/cracked_deepslate_bricks.png"],
+            ["textures/blocks/cracked_deepslate_tiles.png", "textures/blocks/deepslate/cracked_deepslate_tiles.png"],
+            ["textures/blocks/deepslate.png", "textures/blocks/deepslate/deepslate.png"],
+            ["textures/blocks/deepslate_bricks.png", "textures/blocks/deepslate/deepslate_bricks.png"],
+            ["textures/blocks/deepslate_coal_ore.png", "textures/blocks/deepslate/deepslate_coal_ore.png"],
+            ["textures/blocks/deepslate_copper_ore.png", "textures/blocks/deepslate/deepslate_copper_ore.png"],
+            ["textures/blocks/deepslate_diamond_ore.png", "textures/blocks/deepslate/deepslate_diamond_ore.png"],
+            ["textures/blocks/deepslate_emerald_ore.png", "textures/blocks/deepslate/deepslate_emerald_ore.png"],
+            ["textures/blocks/deepslate_gold_ore.png", "textures/blocks/deepslate/deepslate_gold_ore.png"],
+            ["textures/blocks/deepslate_iron_ore.png", "textures/blocks/deepslate/deepslate_iron_ore.png"],
+            ["textures/blocks/deepslate_lapis_ore.png", "textures/blocks/deepslate/deepslate_lapis_ore.png"],
+            ["textures/blocks/deepslate_redstone_ore.png", "textures/blocks/deepslate/deepslate_redstone_ore.png"],
+            ["textures/blocks/deepslate_tiles.png", "textures/blocks/deepslate/deepslate_tiles.png"],
+            ["textures/blocks/deepslate_top.png", "textures/blocks/deepslate/deepslate_top.png"],
+            ["textures/blocks/polished_deepslate.png", "textures/blocks/deepslate/polished_deepslate.png"],
+            
+            //candles
+            ["textures/blocks/black_candle.png", "textures/blocks/candles/black_candle.png"],
+            ["textures/blocks/black_candle_lit.png", "textures/blocks/candles/black_candle_lit.png"],
+            ["textures/blocks/blue_candle.png", "textures/blocks/candles/blue_candle.png"],
+            ["textures/blocks/blue_candle_lit.png", "textures/blocks/candles/blue_candle_lit.png"],
+            ["textures/blocks/brown_candle.png", "textures/blocks/candles/brown_candle.png"],
+            ["textures/blocks/brown_candle_lit.png", "textures/blocks/candles/brown_candle_lit.png"],
+            ["textures/blocks/candle.png", "textures/blocks/candles/candle.png"],
+            ["textures/blocks/candle_lit.png", "textures/blocks/candles/candle_lit.png"],
+            ["textures/blocks/cyan_candle.png", "textures/blocks/candles/cyan_candle.png"],
+            ["textures/blocks/cyan_candle_lit.png", "textures/blocks/candles/cyan_candle_lit.png"],
+            ["textures/blocks/gray_candle.png", "textures/blocks/candles/gray_candle.png"],
+            ["textures/blocks/gray_candle_lit.png", "textures/blocks/candles/gray_candle_lit.png"],
+            ["textures/blocks/green_candle.png", "textures/blocks/candles/green_candle.png"],
+            ["textures/blocks/green_candle_lit.png", "textures/blocks/candles/green_candle_lit.png"],
+            ["textures/blocks/light_blue_candle.png", "textures/blocks/candles/light_blue_candle.png"],
+            ["textures/blocks/light_blue_candle_lit.png", "textures/blocks/candles/light_blue_candle_lit.png"],
+            ["textures/blocks/light_gray_candle.png", "textures/blocks/candles/light_gray_candle.png"],
+            ["textures/blocks/light_gray_candle_lit.png", "textures/blocks/candles/light_gray_candle_lit.png"],
+            ["textures/blocks/lime_candle.png", "textures/blocks/candles/lime_candle.png"],
+            ["textures/blocks/lime_candle_lit.png", "textures/blocks/candles/lime_candle_lit.png"],
+            ["textures/blocks/magenta_candle.png", "textures/blocks/candles/magenta_candle.png"],
+            ["textures/blocks/magenta_candle_lit.png", "textures/blocks/candles/magenta_candle_lit.png"],
+            ["textures/blocks/orange_candle.png", "textures/blocks/candles/orange_candle.png"],
+            ["textures/blocks/orange_candle_lit.png", "textures/blocks/candles/orange_candle_lit.png"],
+            ["textures/blocks/pink_candle.png", "textures/blocks/candles/pink_candle.png"],
+            ["textures/blocks/pink_candle_lit.png", "textures/blocks/candles/pink_candle_lit.png"],
+            ["textures/blocks/purple_candle.png", "textures/blocks/candles/purple_candle.png"],
+            ["textures/blocks/purple_candle_lit.png", "textures/blocks/candles/purple_candle_lit.png"],
+            ["textures/blocks/red_candle.png", "textures/blocks/candles/red_candle.png"],
+            ["textures/blocks/red_candle_lit.png", "textures/blocks/candles/red_candle_lit.png"],
+            ["textures/blocks/white_candle.png", "textures/blocks/candles/white_candle.png"],
+            ["textures/blocks/white_candle_lit.png", "textures/blocks/candles/white_candle_lit.png"],
+            ["textures/blocks/yellow_candle.png", "textures/blocks/candles/yellow_candle.png"],
+            ["textures/blocks/yellow_candle_lit.png", "textures/blocks/candles/yellow_candle_lit.png"],
+            
+            //decorated_pot
+            ["textures/entity/decorated_pot/angler_pottery_pattern.png", "textures/blocks/angler_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/archer_pottery_pattern.png", "textures/blocks/archer_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/arms_up_pottery_pattern.png", "textures/blocks/arms_up_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/blade_pottery_pattern.png", "textures/blocks/blade_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/brewer_pottery_pattern.png", "textures/blocks/brewer_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/burn_pottery_pattern.png", "textures/blocks/burn_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/danger_pottery_pattern.png", "textures/blocks/danger_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/explorer_pottery_pattern.png", "textures/blocks/explorer_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/flow_pottery_pattern.png", "textures/blocks/flow_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/friend_pottery_pattern.png", "textures/blocks/friend_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/guster_pottery_pattern.png", "textures/blocks/guster_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/heartbreak_pottery_pattern.png", "textures/blocks/heartbreak_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/heart_pottery_pattern.png", "textures/blocks/heart_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/howl_pottery_pattern.png", "textures/blocks/howl_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/miner_pottery_pattern.png", "textures/blocks/miner_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/mourner_pottery_pattern.png", "textures/blocks/mourner_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/plenty_pottery_pattern.png", "textures/blocks/plenty_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/prize_pottery_pattern.png", "textures/blocks/prize_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/scrape_pottery_pattern.png", "textures/blocks/scrape_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/sheaf_pottery_pattern.png", "textures/blocks/sheaf_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/shelter_pottery_pattern.png", "textures/blocks/shelter_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/skull_pottery_pattern.png", "textures/blocks/skull_pottery_pattern.png"],
+            ["textures/entity/decorated_pot/snort_pottery_pattern.png", "textures/blocks/snort_pottery_pattern.png"],
+
+
+            // New blocks
+            ["textures/blocks/flowering_azalea_leaves.png", "textures/blocks/azalea_leaves_flowers.png"],
+            ["textures/blocks/big_dripleaf_side.png", "textures/blocks/big_dripleaf_side1.png"],
+            ["textures/blocks/big_dripleaf_tip.png", "textures/blocks/big_dripleaf_side2.png"],
+            ["textures/blocks/cave_vines.png", "textures/blocks/cave_vines_head.png"],
+            ["textures/blocks/cave_vines_lit.png", "textures/blocks/cave_vines_berries.png"],
+            ["textures/blocks/cave_vines_plant.png", "textures/blocks/cave_vines_body.png"],
+            ["textures/blocks/cave_vines_plant_lit.png", "textures/blocks/cave_vines_plant_berries.png"],
+            ["textures/blocks/closed_eyeblossom.png", "textures/blocks/eyeblossom_dormant.png"],
+            ["textures/blocks/creaking_heart_awake.png", "textures/blocks/creaking_heart_active.png"],
+            ["textures/blocks/creaking_heart_top_awake.png", "textures/blocks/creaking_heart_top_active.png"],
+            ["textures/blocks/open_eyeblossom.png", "textures/blocks/eyeblossom_stem_blooming.png"],
+            ["textures/blocks/open_eyeblossom_emissive.png", "textures/blocks/eyeblossom_eyes_blooming.png"],
+            ["textures/blocks/pale_hanging_moss.png", "textures/blocks/pale_hanging_moss_middle.png"],
+            ["textures/blocks/pale_moss_carpet_side_small.png", "textures/blocks/pale_moss_carpet_side_tip.png"],
+            ["textures/blocks/pale_moss_carpet_side_tall.png", "textures/blocks/pale_moss_carpet_side_base.png"],
+            ["textures/blocks/pale_oak_log.png", "textures/blocks/pale_oak_log_side.png"],
+            ["textures/blocks/stripped_pale_oak_log.png", "textures/blocks/stripped_pale_oak_log_side.png"],
+            ["textures/blocks/pointed_dripstone_down_tip_merge.png", "textures/blocks/pointed_dripstone_down_merge.png"],
+            ["textures/blocks/pointed_dripstone_up_tip_merge.png", "textures/blocks/pointed_dripstone_up_merge.png"],
+            ["textures/blocks/rooted_dirt.png", "textures/blocks/dirt_with_roots.png"],
+            ["textures/blocks/torchflower_crop_stage0.png", "textures/blocks/torchflower_crop_stage_0.png"],
+            ["textures/blocks/torchflower_crop_stage1.png", "textures/blocks/torchflower_crop_stage_1.png"],
+
+            // New Items
+            ["textures/items/axolotl_bucket.png", "textures/items/bucket_axolotl.png"],
+            ["textures/items/glow_ink_sac.png", "textures/items/dye_powder_glow.png"],
+            ["textures/items/music_disc_5.png", "textures/items/record_5.png"],
+            ["textures/items/powder_snow_bucket.png", "textures/items/bucket_powder_snow.png"],
+            ["textures/items/tadpole_bucket.png", "textures/items/bucket_tadpole.png"],
+            ["textures/items/wolf_armor.png", "textures/items/wolf_armor.png"],
+            ["textures/items/wolf_armor_overlay.png", "textures/items/wolf_armor_overlay.png"],
+            
+            // Bundles
+            ["textures/items/black_bundle.png", "textures/items/bundle_black.png"],
+            ["textures/items/black_bundle_open_back.png", "textures/items/bundle_black_open_back.png"],
+            ["textures/items/black_bundle_open_front.png", "textures/items/bundle_black_open_front.png"],
+            ["textures/items/blue_bundle.png", "textures/items/bundle_blue.png"],
+            ["textures/items/blue_bundle_open_back.png", "textures/items/bundle_blue_open_back.png"],
+            ["textures/items/blue_bundle_open_front.png", "textures/items/bundle_blue_open_front.png"],
+            ["textures/items/brown_bundle.png", "textures/items/bundle_brown.png"],
+            ["textures/items/brown_bundle_open_back.png", "textures/items/bundle_brown_open_back.png"],
+            ["textures/items/brown_bundle_open_front.png", "textures/items/bundle_brown_open_front.png"],
+            ["textures/items/cyan_bundle.png", "textures/items/bundle_cyan.png"],
+            ["textures/items/cyan_bundle_open_back.png", "textures/items/bundle_cyan_open_back.png"],
+            ["textures/items/cyan_bundle_open_front.png", "textures/items/bundle_cyan_open_front.png"],
+            ["textures/items/gray_bundle.png", "textures/items/bundle_gray.png"],
+            ["textures/items/gray_bundle_open_back.png", "textures/items/bundle_gray_open_back.png"],
+            ["textures/items/gray_bundle_open_front.png", "textures/items/bundle_gray_open_front.png"],
+            ["textures/items/green_bundle.png", "textures/items/bundle_green.png"],
+            ["textures/items/green_bundle_open_back.png", "textures/items/bundle_green_open_back.png"],
+            ["textures/items/green_bundle_open_front.png", "textures/items/bundle_green_open_front.png"],
+            ["textures/items/light_blue_bundle.png", "textures/items/bundle_light_blue.png"],
+            ["textures/items/light_blue_bundle_open_back.png", "textures/items/bundle_light_blue_open_back.png"],
+            ["textures/items/light_blue_bundle_open_front.png", "textures/items/bundle_light_blue_open_front.png"],
+            ["textures/items/light_gray_bundle.png", "textures/items/bundle_light_gray.png"],
+            ["textures/items/light_gray_bundle_open_back.png", "textures/items/bundle_light_gray_open_back.png"],
+            ["textures/items/light_gray_bundle_open_front.png", "textures/items/bundle_light_gray_open_front.png"],
+            ["textures/items/lime_bundle.png", "textures/items/bundle_lime.png"],
+            ["textures/items/lime_bundle_open_back.png", "textures/items/bundle_lime_open_back.png"],
+            ["textures/items/lime_bundle_open_front.png", "textures/items/bundle_lime_open_front.png"],
+            ["textures/items/magenta_bundle.png", "textures/items/bundle_magenta.png"],
+            ["textures/items/magenta_bundle_open_back.png", "textures/items/bundle_magenta_open_back.png"],
+            ["textures/items/magenta_bundle_open_front.png", "textures/items/bundle_magenta_open_front.png"],
+            ["textures/items/orange_bundle.png", "textures/items/bundle_orange.png"],
+            ["textures/items/orange_bundle_open_back.png", "textures/items/bundle_orange_open_back.png"],
+            ["textures/items/orange_bundle_open_front.png", "textures/items/bundle_orange_open_front.png"],
+            ["textures/items/pink_bundle.png", "textures/items/bundle_pink.png"],
+            ["textures/items/pink_bundle_open_back.png", "textures/items/bundle_pink_open_back.png"],
+            ["textures/items/pink_bundle_open_front.png", "textures/items/bundle_pink_open_front.png"],
+            ["textures/items/purple_bundle.png", "textures/items/bundle_purple.png"],
+            ["textures/items/purple_bundle_open_back.png", "textures/items/bundle_purple_open_back.png"],
+            ["textures/items/purple_bundle_open_front.png", "textures/items/bundle_purple_open_front.png"],
+            ["textures/items/red_bundle.png", "textures/items/bundle_red.png"],
+            ["textures/items/red_bundle_open_back.png", "textures/items/bundle_red_open_back.png"],
+            ["textures/items/red_bundle_open_front.png", "textures/items/bundle_red_open_front.png"],
+            ["textures/items/white_bundle.png", "textures/items/bundle_white.png"],
+            ["textures/items/white_bundle_open_back.png", "textures/items/bundle_white_open_back.png"],
+            ["textures/items/white_bundle_open_front.png", "textures/items/bundle_white_open_front.png"],
+            ["textures/items/yellow_bundle.png", "textures/items/bundle_yellow.png"],
+            ["textures/items/yellow_bundle_open_back.png", "textures/items/bundle_yellow_open_back.png"],
+            ["textures/items/yellow_bundle_open_front.png", "textures/items/bundle_yellow_open_front.png"],
+            
+            // Candles
+            ["textures/items/candle.png", "textures/items/candles/candle.png"],
+            ["textures/items/black_candle.png", "textures/items/candles/black_candle.png"],
+            ["textures/items/blue_candle.png", "textures/items/candles/blue_candle.png"],
+            ["textures/items/brown_candle.png", "textures/items/candles/brown_candle.png"],
+            ["textures/items/cyan_candle.png", "textures/items/candles/cyan_candle.png"],
+            ["textures/items/gray_candle.png", "textures/items/candles/gray_candle.png"],
+            ["textures/items/green_candle.png", "textures/items/candles/green_candle.png"],
+            ["textures/items/light_blue_candle.png", "textures/items/candles/light_blue_candle.png"],
+            ["textures/items/light_gray_candle.png", "textures/items/candles/light_gray_candle.png"],
+            ["textures/items/lime_candle.png", "textures/items/candles/lime_candle.png"],
+            ["textures/items/magenta_candle.png", "textures/items/candles/magenta_candle.png"],
+            ["textures/items/orange_candle.png", "textures/items/candles/orange_candle.png"],
+            ["textures/items/pink_candle.png", "textures/items/candles/pink_candle.png"],
+            ["textures/items/purple_candle.png", "textures/items/candles/purple_candle.png"],
+            ["textures/items/red_candle.png", "textures/items/candles/red_candle.png"],
+            ["textures/items/white_candle.png", "textures/items/candles/white_candle.png"],
+            ["textures/items/yellow_candle.png", "textures/items/candles/yellow_candle.png"],
+            
+            // Spawn Eggs
+            ["textures/items/allay_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_allay.png"],
+            ["textures/items/armadillo_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_armadillo.png"],
+            ["textures/items/axolotl_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_axolotl.png"],
+            ["textures/items/bat_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_bat.png"],
+            ["textures/items/bee_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_bee.png"],
+            ["textures/items/blaze_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_blaze.png"],
+            ["textures/items/bogged_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_bogged.png"],
+            ["textures/items/breeze_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_breeze.png"],
+            ["textures/items/camel_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_camel.png"],
+            ["textures/items/cat_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_cat.png"],
+            ["textures/items/cave_spider_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_cave_spider.png"],
+            ["textures/items/chicken_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_chicken.png"],
+            ["textures/items/cod_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_cod.png"],
+            ["textures/items/cow_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_cow.png"],
+            ["textures/items/creaking_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_creaking.png"],
+            ["textures/items/creeper_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_creeper.png"],
+            ["textures/items/dolphin_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_dolphin.png"],
+            ["textures/items/donkey_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_donkey.png"],
+            ["textures/items/drowned_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_drowned.png"],
+            ["textures/items/elder_guardian_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_elder_guardian.png"],
+            ["textures/items/ender_dragon_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_ender_dragon.png"],
+            ["textures/items/enderman_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_enderman.png"],
+            ["textures/items/endermite_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_endermite.png"],
+            ["textures/items/evoker_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_evoker.png"],
+            ["textures/items/fox_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_fox.png"],
+            ["textures/items/frog_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_frog.png"],
+            ["textures/items/ghast_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_ghast.png"],
+            ["textures/items/glow_squid_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_glow_squid.png"],
+            ["textures/items/goat_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_goat.png"],
+            ["textures/items/guardian_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_guardian.png"],
+            ["textures/items/hoglin_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_hoglin.png"],
+            ["textures/items/horse_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_horse.png"],
+            ["textures/items/husk_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_husk.png"],
+            ["textures/items/iron_golem_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_iron_golem.png"],
+            ["textures/items/llama_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_llama.png"],
+            ["textures/items/magma_cube_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_magma_cube.png"],
+            ["textures/items/mooshroom_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_mooshroom.png"],
+            ["textures/items/mule_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_mule.png"],
+            ["textures/items/ocelot_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_ocelot.png"],
+            ["textures/items/panda_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_panda.png"],
+            ["textures/items/parrot_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_parrot.png"],
+            ["textures/items/phantom_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_phantom.png"],
+            ["textures/items/pig_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_pig.png"],
+            ["textures/items/piglin_brute_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_piglin_brute.png"],
+            ["textures/items/piglin_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_piglin.png"],
+            ["textures/items/pillager_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_pillager.png"],
+            ["textures/items/polar_bear_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_polar_bear.png"],
+            ["textures/items/pufferfish_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_pufferfish.png"],
+            ["textures/items/rabbit_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_rabbit.png"],
+            ["textures/items/ravager_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_ravager.png"],
+            ["textures/items/salmon_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_salmon.png"],
+            ["textures/items/sheep_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_sheep.png"],
+            ["textures/items/shulker_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_shulker.png"],
+            ["textures/items/silverfish_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_silverfish.png"],
+            ["textures/items/skeleton_horse_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_skeleton_horse.png"],
+            ["textures/items/skeleton_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_skeleton.png"],
+            ["textures/items/slime_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_slime.png"],
+            ["textures/items/sniffer_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_sniffer.png"],
+            ["textures/items/snow_golem_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_snow_golem.png"],
+            ["textures/items/spider_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_spider.png"],
+            ["textures/items/squid_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_squid.png"],
+            ["textures/items/stray_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_stray.png"],
+            ["textures/items/strider_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_strider.png"],
+            ["textures/items/tadpole_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_tadpole.png"],
+            ["textures/items/trader_llama_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_trader_llama.png"],
+            ["textures/items/tropical_fish_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_tropicalfish.png"],
+            ["textures/items/turtle_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_turtle.png"],
+            ["textures/items/vex_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_vex.png"],
+            ["textures/items/villager_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_villager.png"],
+            ["textures/items/vindicator_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_vindicator.png"],
+            ["textures/items/wandering_trader_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_wandering_trader.png"],
+            ["textures/items/warden_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_warden.png"],
+            ["textures/items/witch_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_witch.png"],
+            ["textures/items/wither_skeleton_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_wither_skeleton.png"],
+            ["textures/items/wither_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_wither.png"],
+            ["textures/items/wolf_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_wolf.png"],
+            ["textures/items/zoglin_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_zoglin.png"],
+            ["textures/items/zombie_horse_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_zombie_horse.png"],
+            ["textures/items/zombie_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_zombie.png"],
+            ["textures/items/zombie_villager_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_zombie_villager.png"],
+            ["textures/items/zombified_piglin_spawn_egg.png", "textures/items/spawn_eggs/spawn_egg_zombified_piglin.png"]
+
+            // Entity
+            ["textures/entity/bat.png", "textures/entity/bat_v2.png"],
+            
+            ["textures/entity/boat/bamboo.png", "textures/entity/boat/bamboo_raft.png"],
+            ["textures/entity/boat/cherry.png", "textures/entity/boat/cherry_boat.png"],
+            ["textures/entity/boat/mangrove.png", "textures/entity/boat/mangrove_boat.png"],
+            ["textures/entity/boat/pale_oak.png", "textures/entity/boat/pale_oak_boat.png"],
+            
+            ["textures/entity/chest_boat/acacia.png", "textures/entity/boat/chest_boat_acacia.png"],
+            ["textures/entity/chest_boat/bamboo.png", "textures/entity/boat/bamboo.png"],
+            ["textures/entity/chest_boat/birch.png", "textures/entity/boat/chest_boat_birch.png"],
+            ["textures/entity/chest_boat/cherry.png", "textures/entity/boat/chest_boat_cherry.png"],
+            ["textures/entity/chest_boat/dark_oak.png", "textures/entity/boat/chest_boat_darkoak.png"],
+            ["textures/entity/chest_boat/jungle.png", "textures/entity/boat/chest_boat_jungle.png"],
+            ["textures/entity/chest_boat/mangrove.png", "textures/entity/boat/chest_boat_mangrove.png"],
+            ["textures/entity/chest_boat/oak.png", "textures/entity/boat/chest_boat_oak.png"],
+            ["textures/entity/chest_boat/pale_oak.png", "textures/entity/boat/chest_boat_pale_oak.png"],
+            ["textures/entity/chest_boat/spruce.png", "textures/entity/boat/chest_boat_spruce.png"],
+            
+            ["textures/entity/chicken/cold_chicken.png", "textures/entity/chicken/chicken_cold.png"],
+            ["textures/entity/chicken/temperate_chicken.png", "textures/entity/chicken/chicken.png"],
+            ["textures/entity/chicken/warm_chicken.png", "textures/entity/chicken/chicken_warm.png"],
+            
+            ["textures/entity/cow/brown_mooshroom.png", "textures/entity/cow/brown_mooshroom_v2.png"],
+            ["textures/entity/cow/cold_cow.png", "textures/entity/cow/cow_cold.png"],
+            ["textures/entity/cow/red_mooshroom.png", "textures/entity/cow/red_mooshroom_v2.png"],
+            ["textures/entity/cow/temperate_cow.png", "textures/entity/cow/cow_v2.png"],
+            ["textures/entity/cow/warm_cow.png", "textures/entity/cow/cow_warm.png"],
+            
+            ["textures/entity/hoglin/zoglin.png", "textures/entity/zoglin/zoglin.png"],
+            
+            ["textures/entity/iron_golem/iron_golem.png", "textures/entity/iron_golem/iron_golem.png"],
+            ["textures/entity/iron_golem/iron_golem_crackiness_high.png", "textures/entity/iron_golem/cracked_high.png"],
+            ["textures/entity/iron_golem/iron_golem_crackiness_low.png", "textures/entity/iron_golem/cracked_low.png"],
+            ["textures/entity/iron_golem/iron_golem_crackiness_medium.png", "textures/entity/iron_golem/cracked_medium.png"],
+            
+            ["textures/entity/pig/cold_pig.png", "textures/entity/pig/pig_cold.png"],
+            ["textures/entity/pig/temperate_pig.png", "textures/entity/pig/pig_v3.png"],
+            ["textures/entity/pig/warm_pig.png", "textures/entity/pig/pig_warm.png"],
+            
+            ["textures/entity/piglin/zombified_piglin.png", "textures/entity/piglin/zombie_piglin.png"],
+            
+            ["textures/entity/projectiles/wind_charge.png", "textures/entity/wind_charge.png"],
+            
+            ["textures/entity/sheep/sheep.png", "textures/entity/sheep/sheep.png"],
+            ["textures/entity/sheep/sheep_wool.png", "textures/entity/sheep/sheep_wool.png"],
+            ["textures/entity/sheep/sheep_wool_undercoat.png", "textures/entity/sheep/sheep_wool_undercoat.png"],
+            
+            ["textures/entity/shield/", "textures/entity/shield_pattern/"],
+            
+            ["textures/entity/signs/bamboo.png", "textures/entity/bamboo_sign.png"],
+            ["textures/entity/signs/cherry.png", "textures/entity/signs/cherry_sign.png"],
+            ["textures/entity/signs/mangrove.png", "textures/entity/signs/mangrove_sign.png"],
+            ["textures/entity/signs/pale_oak.png", "textures/entity/signs/pale_oak_sign.png"],
+            
+            ["textures/entity/signs/hanging/acacia.png", "textures/entity/acacia_hanging_sign.png"],
+            ["textures/entity/signs/hanging/bamboo.png", "textures/entity/bamboo_hanging_sign.png"],
+            ["textures/entity/signs/hanging/birch.png", "textures/entity/birch_hanging_sign.png"],
+            ["textures/entity/signs/hanging/cherry.png", "textures/entity/cherry_hanging_sign.png"],
+            ["textures/entity/signs/hanging/crimson.png", "textures/entity/crimson_hanging_sign.png"],
+            ["textures/entity/signs/hanging/dark_oak.png", "textures/entity/dark_oak_hanging_sign.png"],
+            ["textures/entity/signs/hanging/jungle.png", "textures/entity/jungle_hanging_sign.png"],
+            ["textures/entity/signs/hanging/mangrove.png", "textures/entity/mangrove_hanging_sign.png"],
+            ["textures/entity/signs/hanging/oak.png", "textures/entity/oak_hanging_sign.png"],
+            ["textures/entity/signs/hanging/pale_oak.png", "textures/entity/pale_oak_hanging_sign.png"],
+            ["textures/entity/signs/hanging/spruce.png", "textures/entity/spruce_hanging_sign.png"],
+            ["textures/entity/signs/hanging/warped.png", "textures/entity/warped_hanging_sign.png"],
+            
+            ["textures/entity/skeleton/bogged_overlay.png", "textures/entity/skeleton/bogged_clothes.png"],
+            
+            ["textures/entity/squid/glow_squid.png", "textures/entity/glow_squid/glow_squid.png"],
+            
+            //["textures/entity/equipment/pig_saddle/saddle.png", "textures/entity/saddle_v2.png"], 1.21.2
+            
+            ["textures/entity/pig/pig_saddle.png", "textures/entity/saddle_v2.png"],
+            ["textures/entity/wolf/wolf_armor_crackiness_high.png", "textures/entity/wolf/wolf_armor_cracked_high.png"],
+            ["textures/entity/wolf/wolf_armor_crackiness_low.png", "textures/entity/wolf/wolf_armor_cracked_low.png"],
+            ["textures/entity/wolf/wolf_armor_crackiness_medium.png", "textures/entity/wolf/wolf_armor_cracked_medium.png"]
+            //["textures/entity/equipment/wolf_body/armadillo_scute.png", "textures/entity/wolf/wolf_armor.png"]
+
         ];
     }
 }
@@ -62198,52 +62592,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _VillagerConverter_mjs__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./VillagerConverter.mjs */ "./node_modules/@modifiedcommand/convert-minecraft-java-texture-to-bedrock-api/src/converter/VillagerConverter.mjs");
 /* harmony import */ var _WaterConverter_mjs__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./WaterConverter.mjs */ "./node_modules/@modifiedcommand/convert-minecraft-java-texture-to-bedrock-api/src/converter/WaterConverter.mjs");
 /* harmony import */ var _WeatherConverter_mjs__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./WeatherConverter.mjs */ "./node_modules/@modifiedcommand/convert-minecraft-java-texture-to-bedrock-api/src/converter/WeatherConverter.mjs");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
