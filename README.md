@@ -10,8 +10,8 @@ It supports the follow Minecraft versions:
 
 | Minecraft | Version |
 |-----------|---------|
-| Java | v1.13.x, v1.14.x, v1.15.x or v1.16.x |
-| Bedrock | >= v1.16.20 |
+| Java | v1.13.x, v1.14.x, v1.15.x or v1.16.x and higher |
+| Bedrock | >= v1.21.80 |
 
 This project is inspired by the no longer continued [PCTexture2PE](https://github.com/rodrigojxd/PCTexture2PE)
 
@@ -58,7 +58,7 @@ Tested browsers:
 Internet Explorer or old Edge are not supported!
 
 ## Web app
-* The latest version is available through [GitHub pages](http://vironite-23.github.io/ConvertJavaTextureToBedrockViro/)
+* The latest version is available through [GitHub pages](http://vironite-23.github.io/ConvertJavaTextureToBedrock/)
 
 ## API
-* Look at [vironite-23/ConvertJavaTextureToBedrockApi](https://github.com/vironite-23/ConvertJavaTextureToBedrockApiViro)
+* Look at [vironite-23/ConvertJavaTextureToBedrockApi](https://github.com/vironite-23/ConvertJavaTextureToBedrockApi)
